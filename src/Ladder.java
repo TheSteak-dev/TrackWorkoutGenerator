@@ -4,8 +4,12 @@ public class Ladder implements Set {
 
 	private Rep[] reps;
 	
-	public Ladder() {
+	public Ladder(int type) {
 		// TODO Auto-generated constructor stub
+	}
+	public Ladder(int type, String reps)
+	{
+		//TODO
 	}
 
 	@Override

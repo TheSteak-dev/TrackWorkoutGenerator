@@ -11,8 +11,38 @@ public class Workout {
 	public static final int SPEEDENDURANCE2 = 3456;
 	public static final int ENDURANCE = 4567;
 	
-	public Workout() {
-		// TODO Auto-generated constructor stub
+	public Workout(int type, String fileName) 
+	{
+		//TODO (prebuilt)
 	}
-
+	
+	public Workout(int type)
+	{
+		//TODO (generate)
+	}
+	
+	public String toString()
+	{
+		return "";
+	}
+	
+	public int getType()
+	{
+		return 0;
+	}
+	
+	public int getTotalDistance()
+	{
+		return 0;
+	}
+	
+	public int getDifficulty()
+	{
+		return 0;
+	}
+	
+	public Set[] getSets()
+	{
+		return null;
+	}
 }

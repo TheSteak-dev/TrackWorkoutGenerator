@@ -4,8 +4,12 @@ public class Straight implements Set {
 
 	private Rep[] reps;
 	
-	public Straight() {
+	public Straight(int type) {
 		// TODO Auto-generated constructor stub
+	}
+	public Straight(int type, String reps)
+	{
+		
 	}
 
 	@Override
