@@ -3,43 +3,62 @@ package workout;
 public class Straight implements Set {
 
 	private Rep[] reps;
+	private int type;
+	private int difficulty;
+	private int rest;
 	
 	public Straight(int type) {
 		// TODO Auto-generated constructor stub
 	}
-	public Straight(int type, String reps)
+	public Straight(int type, String _rep, int reps, int rest)
 	{
-		
+		this.reps = new Rep[reps];
+		this.rest = rest;
+		Rep decoded = decode(_rep);
+		for (int i = 0; i < reps; i++)
+		{
+			this.reps[i] = decoded;
+		}
 	}
 
 	@Override
 	public int getDifficulty() {
-		// TODO Auto-generated method stub
-		return 0;
+		return difficulty;
 	}
 
 	@Override
 	public Rep[] getReps() {
-		// TODO Auto-generated method stub
-		return null;
+		return reps;
 	}
 
 	@Override
 	public int getType() {
-		// TODO Auto-generated method stub
-		return 0;
+		return type;
 	}
 
 	@Override
 	public int getRest() {
-		// TODO Auto-generated method stub
-		return 0;
+		return rest;
+	}
+	
+	private Rep decode(String rep) //def a easier way to do this, but nah not now
+	{
+		int a, b, c, d, i, j;
+		i = 0;
+		j = 0;
+		i = rep.indexOf(';', j);
+		a = Integer.parseInt(rep.substring(j,i));
+		j = rep.indexOf(';', i);
+		b = Integer.parseInt(rep.substring(i, j));
+		i = rep.indexOf(';', j);
+		c = Integer.parseInt(rep.substring(j,i));
+		j = rep.indexOf(';', i);
+		d = Integer.parseInt(rep.substring(i, j));
+		return new Rep(a, b, c, d);
+		
 	}
 
-	@Override
-	public int getDistance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
+
 
 }

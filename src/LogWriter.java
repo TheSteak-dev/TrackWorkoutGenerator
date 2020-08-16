@@ -12,7 +12,7 @@ public class LogWriter {
 	{
 		try
 		{
-			writer = new FileWriter("res/Logs/Log.txt");
+			writer = new FileWriter("res/logs/Log.txt");
 		}
 		catch(IOException e)
 		{

@@ -36,10 +36,5 @@ public class Ladder implements Set {
 		return 0;
 	}
 
-	@Override
-	public int getDistance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }
