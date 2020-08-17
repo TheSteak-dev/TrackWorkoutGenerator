@@ -3,37 +3,65 @@ package workout;
 public class Ladder implements Set {
 
 	private Rep[] reps;
+	private int type;
+	private int difficulty;
+	private int rest;
 	
 	public Ladder(int type) {
 		// TODO Auto-generated constructor stub
 	}
-	public Ladder(int type, String reps)
+	public Ladder(int type, String[] stringReps, int rest)
 	{
-		//TODO
+		this.rest = rest;
+		this.type = type;
+		for (int i = 0; i < stringReps.length; i++)
+		{
+			reps[i] = decode(stringReps[i]);
+		}
+		difficulty = calculateDifficulty();
 	}
 
 	@Override
 	public int getDifficulty() {
-		// TODO Auto-generated method stub
-		return 0;
+		return difficulty;
 	}
 
 	@Override
 	public Rep[] getReps() {
-		// TODO Auto-generated method stub
-		return null;
+		return reps;
 	}
 
 	@Override
 	public int getType() {
-		// TODO Auto-generated method stub
-		return 0;
+		return type;
 	}
 
 	@Override
 	public int getRest() {
-		// TODO Auto-generated method stub
+		return rest;
+	}
+	
+	private int calculateDifficulty()
+	{
+		//TODO
 		return 0;
+	}
+	
+	private Rep decode(String rep) //def a easier way to do this, but nah not now
+	{
+		int a, b, c, d, i, j;
+		i = 0;
+		j = 0;
+		i = rep.indexOf(';', j);
+		a = Integer.parseInt(rep.substring(j,i));
+		j = rep.indexOf(';', i);
+		b = Integer.parseInt(rep.substring(i, j));
+		i = rep.indexOf(';', j);
+		c = Integer.parseInt(rep.substring(j,i));
+		j = rep.indexOf(';', i);
+		d = Integer.parseInt(rep.substring(i, j));
+		return new Rep(a, b, c, d);
+		
 	}
 
 

@@ -7,6 +7,7 @@ public class Main
 	{
 		System.out.println("Started");
 		GraphicsFrame frame = new GraphicsFrame();
+		frame.start();
 	}
 
 }

@@ -13,19 +13,39 @@ public class Rep {
 		this.intensity = intensity;
 		this.recovery = recovery;
 		this.rest = rest;
-		difficulty = getDifficulty();
+		difficulty = calculateDifficulty();
 		
 	}
 	public Rep(int difficulty)
 	{
 		//TODO generate
 	}
+	public int getDistance()
+	{
+		return distance;
+	}
+	public int getRecovery()
+	{
+		return recovery;
+	}
+	public int getRest()
+	{
+		return rest;
+	}
+	public int getIntensity()
+	{
+		return intensity;
+	}
+	public int getDifficulty()
+	{
+		return difficulty;
+	}
 	public String toString()
 	{
 		//in format [distance;intensity;recovery;rest,difficulty]
 		return String.format("%d;%d;%d;%d", distance, intensity, recovery, rest);
 	}
-	private int getDifficulty()
+	private int calculateDifficulty()
 	{
 		//TODO set difficulty
 		return 0;

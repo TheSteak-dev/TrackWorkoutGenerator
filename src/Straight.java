@@ -19,6 +19,7 @@ public class Straight implements Set {
 		{
 			this.reps[i] = decoded;
 		}
+		difficulty = calculateDifficulty();
 	}
 
 	@Override
@@ -39,6 +40,12 @@ public class Straight implements Set {
 	@Override
 	public int getRest() {
 		return rest;
+	}
+	
+	private int calculateDifficulty()
+	{
+		//TODO
+		return 0;
 	}
 	
 	private Rep decode(String rep) //def a easier way to do this, but nah not now
