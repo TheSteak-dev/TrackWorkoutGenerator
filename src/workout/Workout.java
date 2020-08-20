@@ -1,10 +1,14 @@
 package workout;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Workout {
 	
-	Set[] sets;
-	int difficulty;
-	int totalDistance;
+	private final Set[] sets;
+	private final int difficulty;
+	private final int totalDistance;
+	private FileWriter writer;
 	
 	public static final int SPEED = 1234;
 	public static final int SPEEDENDURANCE1 = 2345;
@@ -13,7 +17,17 @@ public class Workout {
 	
 	public Workout(int type, String fileName) 
 	{
-		//TODO (prebuilt)
+		try 
+		{
+			writer = new FileWriter(fileName);
+		}
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		
+		
 	}
 	
 	public Workout(int type)
