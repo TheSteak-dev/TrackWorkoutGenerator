@@ -6,6 +6,7 @@ public class Straight implements Set {
 	private int type;
 	private int difficulty;
 	private int rest;
+	private int totalDistance;
 	
 	public Straight(int type) {
 		// TODO Auto-generated constructor stub
@@ -19,6 +20,7 @@ public class Straight implements Set {
 		{
 			this.reps[i] = decoded;
 		}
+		totalDistance = decoded.getDistance() * reps;
 		difficulty = calculateDifficulty();
 	}
 
@@ -63,6 +65,10 @@ public class Straight implements Set {
 		d = Integer.parseInt(rep.substring(i, j));
 		return new Rep(a, b, c, d);
 		
+	}
+	@Override
+	public int getDistance() {
+		return totalDistance;
 	}
 
 	

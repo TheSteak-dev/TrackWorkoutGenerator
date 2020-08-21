@@ -1,14 +1,14 @@
 package workout;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Workout {
 	
-	private final Set[] sets;
+	private Set[] sets;
 	private final int difficulty;
-	private final int totalDistance;
-	private FileWriter writer;
+	private int totalDistance;
+	private Scanner scanner;
+	private final int type;
 	
 	public static final int SPEED = 1234;
 	public static final int SPEEDENDURANCE1 = 2345;
@@ -17,23 +17,39 @@ public class Workout {
 	
 	public Workout(int type, String fileName) 
 	{
-		try 
+
+		this.type = -1;
+		totalDistance = 0;
+		sets =  new Set[0];
+		
+		
+		scanner = new Scanner(fileName);
+		type = scanner.nextInt();
+		String reps = "";
+		while(scanner.hasNextLine())
 		{
-			writer = new FileWriter(fileName);
+			String line = scanner.nextLine();
+			if (line.equals("end"))
+			{
+				Set set = decode(reps);
+				addSet(set);
+				totalDistance += set.getDistance();
+			}
 		}
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
+		difficulty = calculateDifficulty();
+		scanner.close();
+
+		
 		
 		
 		
 	}
 	
-	public Workout(int type)
-	{
-		//TODO (generate)
-	}
+//	public Workout(int type)
+//	{
+//		this.type = 0;
+//		//TODO (generate)
+//	}
 	
 	public String toString()
 	{
@@ -42,21 +58,41 @@ public class Workout {
 	
 	public int getType()
 	{
-		return 0;
+		return type;
 	}
 	
 	public int getTotalDistance()
 	{
-		return 0;
+		return totalDistance;
 	}
 	
 	public int getDifficulty()
 	{
-		return 0;
+		return difficulty;
 	}
 	
 	public Set[] getSets()
 	{
+		return sets;
+	}
+	
+	private int calculateDifficulty()
+	{
+		return 0;
+	}
+	private Set decode(String str)
+	{
 		return null;
+	}
+	private void addSet(Set set)
+	{
+		int length = sets.length;
+		Set[] copy = new Set[length + 1];
+		for (int i = 0; i < length; i++)
+		{
+			copy[i] = sets[i];
+		}
+		copy[length] = set;
+		sets = copy;
 	}
 }

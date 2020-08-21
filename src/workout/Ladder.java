@@ -6,6 +6,7 @@ public class Ladder implements Set {
 	private int type;
 	private int difficulty;
 	private int rest;
+	private int totalDistance;
 	
 	public Ladder(int type) {
 		// TODO Auto-generated constructor stub
@@ -16,7 +17,9 @@ public class Ladder implements Set {
 		this.type = type;
 		for (int i = 0; i < stringReps.length; i++)
 		{
-			reps[i] = decode(stringReps[i]);
+			Rep rep = decode(stringReps[i]);
+			reps[i] = rep;
+			totalDistance += rep.getDistance();
 		}
 		difficulty = calculateDifficulty();
 	}
@@ -62,6 +65,10 @@ public class Ladder implements Set {
 		d = Integer.parseInt(rep.substring(i, j));
 		return new Rep(a, b, c, d);
 		
+	}
+	@Override
+	public int getDistance() {
+		return totalDistance;
 	}
 
 

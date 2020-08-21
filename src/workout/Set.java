@@ -10,5 +10,5 @@ public interface Set {
 	
 	public int getRest();
 	
-
+	public int getDistance();
 }
