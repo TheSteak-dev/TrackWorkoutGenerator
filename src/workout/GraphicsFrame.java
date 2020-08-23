@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
@@ -17,7 +18,11 @@ public class GraphicsFrame {
 	
 	JButton loadSaved, loadPreset, loadRandom;
 	
+	JLabel  menuLogo;
+	
 	Container pane;
+	
+	Workout[] premade, saved;
 	
 
 	public GraphicsFrame() 
@@ -34,6 +39,9 @@ public class GraphicsFrame {
 		loadSavedPage = new JPanel();
 		loadPresetPage = new JPanel();
 		loadRandomPage = new JPanel();
+		
+		menuLogo = new JLabel("Menu");
+		menuLogo.setBounds(230, 000, 40, 20);
 		
 		loadSaved = new JButton("Load Saved");
 		loadSaved.setBounds(100, 100, 130, 30);
@@ -52,6 +60,7 @@ public class GraphicsFrame {
 		menuPage.add(loadSaved);
 		menuPage.add(loadPreset);
 		menuPage.add(loadRandom);
+		menuPage.add(menuLogo);
 		
 		currentPage = menuPage;
 		pane.add(menuPage);
@@ -63,7 +72,7 @@ public class GraphicsFrame {
 	
 	private void goToScreen(JPanel panel)
 	{
-		System.out.println("Going To Page");
+		System.out.println("Going To Page" + panel);
 		pane.remove(currentPage);
 		pane.add(panel);
 		pane.revalidate();
