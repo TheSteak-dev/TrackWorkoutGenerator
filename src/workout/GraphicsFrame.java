@@ -20,40 +20,41 @@ public class GraphicsFrame {
 	Container pane;
 	
 
-	public GraphicsFrame() {
+	public GraphicsFrame() 
+	{
 		frame = new JFrame("Workout Generator");
-		 pane = frame.getContentPane();
+		pane = frame.getContentPane();
 	}
 	
 	public void start()
 	{
 		
 		
-		menuPage = new JPanel();
+		menuPage = new JPanel(null);
 		loadSavedPage = new JPanel();
 		loadPresetPage = new JPanel();
 		loadRandomPage = new JPanel();
 		
 		loadSaved = new JButton("Load Saved");
 		loadSaved.setBounds(100, 100, 130, 30);
-		loadSaved.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {goToScreen(loadSavedPage);}});
+		loadSaved.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
 		
 		loadPreset = new JButton("Load Pre-Set");
-		loadPreset.setBounds(100, 200, 130, 30);
-		loadPreset.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadPresetPage);}});
+		loadPreset.setBounds(200, 200, 130, 30);
+		loadPreset.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
 		
 		loadRandom = new JButton("Load Pre-Set");
-		loadRandom.setBounds(100, 300, 130, 30);
-		loadRandom.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadPresetPage);}});
+		loadRandom.setBounds(300, 300, 130, 30);
+		loadRandom.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
 		 
-		currentPage = menuPage;
-		pane.add(menuPage);
 		
+		//need to add layout managers
 		menuPage.add(loadSaved);
 		menuPage.add(loadPreset);
-		menuPage.add(loadRandomPage);
+		menuPage.add(loadRandom);
 		
-		
+		currentPage = menuPage;
+		pane.add(menuPage);
 		
 		frame.setBounds(100, 100, 500, 500);
 		frame.setResizable(false);
@@ -62,8 +63,10 @@ public class GraphicsFrame {
 	
 	private void goToScreen(JPanel panel)
 	{
+		System.out.println("Going To Page");
 		pane.remove(currentPage);
 		pane.add(panel);
+		pane.revalidate();
 	}
 
 }
