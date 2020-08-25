@@ -12,23 +12,31 @@ import javax.swing.JPanel;
 
 public class GraphicsFrame {
 	
-	JFrame frame;
+	private final int MAXFRAMES = 2;
 	
-	JPanel menuPage, loadSavedPage, loadPresetPage, loadRandomPage, currentPage = null, lastPage = null;
+	private JFrame frame;
 	
-	JButton loadSaved, loadPreset, loadRandom;
+	private JPanel menuPage, loadSavedPage, loadPresetPage, loadRandomPage, currentPage = null, lastPage = null;
 	
-	JLabel  menuLogo;
+	private JButton loadSaved, loadPreset, loadRandom, allBack;
 	
-	Container pane;
+	private JLabel  menuLogo, presetLogo;
 	
-	Workout[] premade, saved;
+	private Container pane;
+	
+	private Workout[] premade, saved;
+	
+	private PanelStack stack;
 	
 
 	public GraphicsFrame() 
 	{
 		frame = new JFrame("Workout Generator");
 		pane = frame.getContentPane();
+		stack = new PanelStack(MAXFRAMES);
+		{
+			//load premade and saved
+		}
 	}
 	
 	public void start()
@@ -36,23 +44,34 @@ public class GraphicsFrame {
 		
 		
 		menuPage = new JPanel(null);
-		loadSavedPage = new JPanel();
-		loadPresetPage = new JPanel();
-		loadRandomPage = new JPanel();
+		loadSavedPage = new JPanel(null);
+		loadPresetPage = new JPanel(null);
+		loadRandomPage = new JPanel(null);
+		
+		allBack = new JButton("Back");
+		allBack.setBounds(1, 450, 70, 20);
+		allBack.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {back();}});
+
+		presetLogo = new JLabel("Preset");
+		presetLogo.setBounds(230, 000, 40, 20);
+		
+		loadPresetPage.add(presetLogo);
+		loadPresetPage.add(allBack);
+		
 		
 		menuLogo = new JLabel("Menu");
 		menuLogo.setBounds(230, 000, 40, 20);
 		
 		loadSaved = new JButton("Load Saved");
-		loadSaved.setBounds(100, 100, 130, 30);
-		loadSaved.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
+		loadSaved.setBounds(180, 165, 140, 30);
+		loadSaved.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {goToScreen(loadSavedPage);}});
 		
 		loadPreset = new JButton("Load Pre-Set");
-		loadPreset.setBounds(200, 200, 130, 30);
-		loadPreset.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
+		loadPreset.setBounds(180, 200, 140, 30);
+		loadPreset.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadPresetPage);}});
 		
-		loadRandom = new JButton("Load Pre-Set");
-		loadRandom.setBounds(300, 300, 130, 30);
+		loadRandom = new JButton("Load Random");
+		loadRandom.setBounds(180, 235, 140, 30);
 		loadRandom.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
 		 
 		
@@ -62,7 +81,7 @@ public class GraphicsFrame {
 		menuPage.add(loadRandom);
 		menuPage.add(menuLogo);
 		
-		currentPage = menuPage;
+		stack.append(menuPage);
 		pane.add(menuPage);
 		
 		frame.setBounds(100, 100, 500, 500);
@@ -73,9 +92,22 @@ public class GraphicsFrame {
 	private void goToScreen(JPanel panel)
 	{
 		System.out.println("Going To Page" + panel);
-		pane.remove(currentPage);
+		pane.remove(stack.current());
 		pane.add(panel);
+		stack.append(panel);
 		pane.revalidate();
+	}
+	
+	private void back() //doesn't work, but it goes just fine
+	{
+		JPanel popped = stack.pop();
+		System.out.println("Going To Page" + popped);
+		pane.remove(popped);
+		System.out.println("Going To Page" + popped);
+		pane.add(stack.current());
+		System.out.println("Going To Page" + popped);
+		pane.revalidate();
+		System.out.println("Going To Page" + popped);
 	}
 
 }
