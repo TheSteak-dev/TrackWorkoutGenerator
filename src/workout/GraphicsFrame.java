@@ -95,19 +95,17 @@ public class GraphicsFrame {
 		pane.remove(stack.current());
 		pane.add(panel);
 		stack.append(panel);
-		pane.revalidate();
+		pane.validate();
+		pane.repaint();
 	}
 	
-	private void back() //doesn't work, but it goes just fine
+	private void back()
 	{
-		JPanel popped = stack.pop();
-		System.out.println("Going To Page" + popped);
-		pane.remove(popped);
-		System.out.println("Going To Page" + popped);
+		pane.remove(stack.pop());
 		pane.add(stack.current());
-		System.out.println("Going To Page" + popped);
-		pane.revalidate();
-		System.out.println("Going To Page" + popped);
+		//pane.validate();
+		pane.repaint();
+		System.out.println("finished");
 	}
 
 }

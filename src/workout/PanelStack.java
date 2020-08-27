@@ -15,13 +15,14 @@ public class PanelStack {
 	
 	public void append(JPanel panel)
 	{
-		stack[last++] = panel;
+		stack[last] = panel;
+		last += 1;
 	}
 	
 	public JPanel pop ()
 	{
 		if (last < 0) throw new ArrayIndexOutOfBoundsException();
-		last--;
+		last -= 1;
 		JPanel temp = stack[last];
 		stack[last] = null;
 		return temp;
