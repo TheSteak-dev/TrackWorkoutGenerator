@@ -1,5 +1,7 @@
 package workout;
 
+//another class that is a set
+
 public class Straight implements Set {
 
 	private Rep[] reps;
@@ -9,8 +11,10 @@ public class Straight implements Set {
 	private int totalDistance;
 	
 	public Straight(int type) {
-		// TODO Auto-generated constructor stub
+		// TODO generate
 	}
+	
+	//build off input
 	public Straight(int type, String _rep, int reps, int rest)
 	{
 		this.reps = new Rep[reps];

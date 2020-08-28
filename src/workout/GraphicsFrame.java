@@ -36,18 +36,22 @@ public class GraphicsFrame {
 		stack = new PanelStack(MAXFRAMES);
 		{
 			//load premade and saved
+			premade = new Workout[0];
+			saved = new Workout[0];
 		}
 	}
 	
 	public void start()
 	{
 		
-		
+		//set Jpanels
 		menuPage = new JPanel(null);
 		loadSavedPage = new JPanel(null);
 		loadPresetPage = new JPanel(null);
 		loadRandomPage = new JPanel(null);
 		
+		
+		//set jComponents for presetPage
 		allBack = new JButton("Back");
 		allBack.setBounds(1, 450, 70, 20);
 		allBack.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {back();}});
@@ -58,10 +62,11 @@ public class GraphicsFrame {
 		loadPresetPage.add(presetLogo);
 		loadPresetPage.add(allBack);
 		
+		//set jComponents for menu
 		
 		menuLogo = new JLabel("Menu");
 		menuLogo.setBounds(230, 000, 40, 20);
-		
+			
 		loadSaved = new JButton("Load Saved");
 		loadSaved.setBounds(180, 165, 140, 30);
 		loadSaved.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {goToScreen(loadSavedPage);}});
@@ -75,21 +80,23 @@ public class GraphicsFrame {
 		loadRandom.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
 		 
 		
-		//need to add layout managers
+		//add jComponents
 		menuPage.add(loadSaved);
 		menuPage.add(loadPreset);
 		menuPage.add(loadRandom);
 		menuPage.add(menuLogo);
 		
+		//initial addition to the panel stack
 		stack.append(menuPage);
 		pane.add(menuPage);
 		
+		//frame editing
 		frame.setBounds(100, 100, 500, 500);
 		frame.setResizable(false);
 		frame.setVisible(true);
 	}
 	
-	private void goToScreen(JPanel panel)
+	private void goToScreen(JPanel panel) //go to a screen, and put it on the stack
 	{
 		System.out.println("Going To Page" + panel);
 		pane.remove(stack.current());
@@ -99,7 +106,7 @@ public class GraphicsFrame {
 		pane.repaint();
 	}
 	
-	private void back()
+	private void back() //go back to the last screen
 	{
 		pane.remove(stack.pop());
 		pane.add(stack.current());

@@ -2,6 +2,10 @@ package workout;
 
 import javax.swing.JPanel;
 
+/*
+ * A Stack for keeping track of panels
+ */
+
 public class PanelStack {
 	
 	private JPanel[] stack;

@@ -2,6 +2,8 @@ package workout;
 
 import java.util.Scanner;
 
+//a class that represents a whole workout
+
 public class Workout {
 	
 	private Set[] sets;

@@ -9,8 +9,10 @@ public class Ladder implements Set {
 	private int totalDistance;
 	
 	public Ladder(int type) {
-		// TODO Auto-generated constructor stub
+		// TODO generate workout
 	}
+	
+	//build off reading in
 	public Ladder(int type, String[] stringReps, int rest)
 	{
 		this.rest = rest;

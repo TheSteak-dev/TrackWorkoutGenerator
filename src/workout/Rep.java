@@ -2,6 +2,8 @@ package workout;
 
 public class Rep {
 	
+	//A class that represents a single set
+	
 	private int distance;
 	private int difficulty;
 	private int recovery;
