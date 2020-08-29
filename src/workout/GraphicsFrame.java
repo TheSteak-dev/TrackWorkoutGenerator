@@ -18,9 +18,9 @@ public class GraphicsFrame {
 	
 	private JPanel menuPage, loadSavedPage, loadPresetPage, loadRandomPage, currentPage = null, lastPage = null;
 	
-	private JButton loadSaved, loadPreset, loadRandom, allBack;
+	private JButton loadSaved, loadPreset, loadRandom, presetBack, savedBack, randomBack;
 	
-	private JLabel  menuLogo, presetLogo;
+	private JLabel  menuLogo, presetLogo, savedLogo, randomLogo;
 	
 	private Container pane;
 	
@@ -28,12 +28,15 @@ public class GraphicsFrame {
 	
 	private PanelStack stack;
 	
+	private ActionListener back;
+	
 
 	public GraphicsFrame() 
 	{
 		frame = new JFrame("Workout Generator");
 		pane = frame.getContentPane();
 		stack = new PanelStack(MAXFRAMES);
+		back = new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {back();}};
 		{
 			//load premade and saved
 			premade = new Workout[0];
@@ -50,17 +53,37 @@ public class GraphicsFrame {
 		loadPresetPage = new JPanel(null);
 		loadRandomPage = new JPanel(null);
 		
+		randomLogo = new JLabel("Random");
+		randomLogo.setBounds(220, 0, 60, 20);
+		
+		randomBack = new JButton("Back");
+		randomBack.setBounds(1, 450, 70, 20);
+		randomBack.addActionListener(back);
+		
+		loadRandomPage.add(randomLogo);
+		loadRandomPage.add(randomBack);
+		
+		//set jComponents for savedPage
+		savedLogo = new JLabel("Saved");
+		savedLogo.setBounds(230, 000, 40, 20);
+		
+		savedBack = new JButton("Back");
+		savedBack.setBounds(1, 450, 70, 20);
+		savedBack.addActionListener(back);
+		
+		loadSavedPage.add(savedLogo);
+		loadSavedPage.add(savedBack);
 		
 		//set jComponents for presetPage
-		allBack = new JButton("Back");
-		allBack.setBounds(1, 450, 70, 20);
-		allBack.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {back();}});
+		presetBack = new JButton("Back");
+		presetBack.setBounds(1, 450, 70, 20);
+		presetBack.addActionListener(back);
 
 		presetLogo = new JLabel("Preset");
 		presetLogo.setBounds(230, 000, 40, 20);
 		
 		loadPresetPage.add(presetLogo);
-		loadPresetPage.add(allBack);
+		loadPresetPage.add(presetBack);
 		
 		//set jComponents for menu
 		
@@ -98,7 +121,7 @@ public class GraphicsFrame {
 	
 	private void goToScreen(JPanel panel) //go to a screen, and put it on the stack
 	{
-		System.out.println("Going To Page" + panel);
+		//System.out.println("Going To Page" + panel);
 		pane.remove(stack.current());
 		pane.add(panel);
 		stack.append(panel);
@@ -112,7 +135,7 @@ public class GraphicsFrame {
 		pane.add(stack.current());
 		//pane.validate();
 		pane.repaint();
-		System.out.println("finished");
+		//System.out.println("finished");
 	}
 
 }
