@@ -1,5 +1,6 @@
 package workout;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //a class that represents a whole workout
@@ -27,7 +28,7 @@ public class Workout {
 		
 		scanner = new Scanner(fileName);
 		type = scanner.nextInt();
-		String reps = "";
+		ArrayList<String>  reps = new ArrayList<String>();
 		while(scanner.hasNextLine())
 		{
 			String line = scanner.nextLine();
@@ -82,8 +83,9 @@ public class Workout {
 	{
 		return 0;
 	}
-	private Set decode(String str)
+	private Set decode(ArrayList<String> array)
 	{
+		if (array.size() == 3);
 		return null;
 	}
 	private void addSet(Set set)
