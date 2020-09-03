@@ -41,7 +41,7 @@ public class Workout {
 		}
 		difficulty = calculateDifficulty();
 		scanner.close();
-
+		LogWriter.write("Workout Finished Construction");
 		
 		
 		
