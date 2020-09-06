@@ -5,7 +5,7 @@ public class Main
 
 	public static void main(String[] args) 
 	{
-		LogWriter.write("program compilted and started");
+		System.out.println("Started");
 		
 		GraphicsFrame frame = new GraphicsFrame();
 		frame.start();

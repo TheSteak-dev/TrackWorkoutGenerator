@@ -41,7 +41,7 @@ public class Workout {
 		}
 		difficulty = calculateDifficulty();
 		scanner.close();
-		LogWriter.write("Workout Finished Construction");
+
 		
 		
 		
@@ -85,7 +85,21 @@ public class Workout {
 	}
 	private Set decode(ArrayList<String> array)
 	{
-		if (array.size() == 3);
+		if (array.size() == 3) //ladder
+		{
+			int type = 0;
+			String[] reps = null;
+			int rest = 0;
+			return new Ladder(type, reps, rest);
+		}
+		else if (array.size() == 4) //straight
+		{
+			int type = 0;
+			String rep = null;
+			int reps = 0;
+			int rest = 0;
+			return new Straight(type, rep, reps, rest);
+		}
 		return null;
 	}
 	private void addSet(Set set)
