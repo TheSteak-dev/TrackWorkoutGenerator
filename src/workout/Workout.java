@@ -87,17 +87,17 @@ public class Workout {
 	{
 		if (array.size() == 3) //ladder
 		{
-			int type = 0;
-			String[] reps = null;
-			int rest = 0;
+			int type = Integer.parseInt(array.get(0));
+			String[] reps = array.get(1).split("-");
+			int rest = Integer.parseInt(array.get(2));
 			return new Ladder(type, reps, rest);
 		}
 		else if (array.size() == 4) //straight
 		{
-			int type = 0;
-			String rep = null;
-			int reps = 0;
-			int rest = 0;
+			int type = Integer.parseInt(array.get(1));
+			String rep = array.get(2);
+			int reps = Integer.parseInt(array.get(3));
+			int rest = Integer.parseInt(array.get(4));
 			return new Straight(type, rep, reps, rest);
 		}
 		return null;
