@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -16,15 +17,17 @@ public class GraphicsFrame {
 	
 	private JFrame frame;
 	
-	private JPanel menuPage, loadSavedPage, loadPresetPage, loadRandomPage, currentPage = null, lastPage = null;
+	private JPanel menuPage, loadSavedPage, loadPresetPage, loadRandomPage;
 	
 	private JButton loadSaved, loadPreset, loadRandom, presetBack, savedBack, randomBack;
 	
 	private JLabel  menuLogo, presetLogo, savedLogo, randomLogo;
 	
+	private JComboBox<Workout> presetCB, savedCB;
+	
 	private Container pane;
 	
-	private Workout[] premade, saved;
+	private Workout[] presetWorkouts, savedWorkouts;
 	
 	private PanelStack stack;
 	
@@ -38,21 +41,22 @@ public class GraphicsFrame {
 		stack = new PanelStack(MAXFRAMES);
 		back = new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {back();}};
 		{
-			//load premade and saved
-			premade = new Workout[0];
-			saved = new Workout[0];
+			//load pre-made and saved
+			presetWorkouts = new Workout[0];
+			savedWorkouts = new Workout[0];
 		}
 	}
 	
 	public void start()
 	{
 		
-		//set Jpanels
+		//set jPanels
 		menuPage = new JPanel(null);
 		loadSavedPage = new JPanel(null);
 		loadPresetPage = new JPanel(null);
 		loadRandomPage = new JPanel(null);
 		
+		//set jComponents for randomPage
 		randomLogo = new JLabel("Random");
 		randomLogo.setBounds(220, 0, 60, 20);
 		
@@ -71,19 +75,32 @@ public class GraphicsFrame {
 		savedBack.setBounds(1, 450, 70, 20);
 		savedBack.addActionListener(back);
 		
+		savedCB= new JComboBox<Workout>(savedWorkouts);
+		savedCB.setEditable(false);
+		savedCB.setBounds(180, 200, 140, 30);
+		savedCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {System.out.println("hye");}});
+		
 		loadSavedPage.add(savedLogo);
 		loadSavedPage.add(savedBack);
+		loadSavedPage.add(savedCB);
 		
 		//set jComponents for presetPage
 		presetBack = new JButton("Back");
 		presetBack.setBounds(1, 450, 70, 20);
 		presetBack.addActionListener(back);
+		
+		presetCB= new JComboBox<Workout>(presetWorkouts);
+		presetCB.setEditable(false);
+		presetCB.setBounds(180, 200, 140, 30);
+		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {System.out.println("hi");}});
+		
 
 		presetLogo = new JLabel("Preset");
 		presetLogo.setBounds(230, 000, 40, 20);
 		
 		loadPresetPage.add(presetLogo);
 		loadPresetPage.add(presetBack);
+		loadPresetPage.add(presetCB);
 		
 		//set jComponents for menu
 		
