@@ -42,10 +42,14 @@ public class Rep {
 	{
 		return difficulty;
 	}
-	public String toString()
+	public String pack()
 	{
 		//in format [distance;intensity;recovery;rest,difficulty]
 		return String.format("%d;%d;%d;%d", distance, intensity, recovery, rest);
+	}
+	public String toString()
+	{
+		return String.format("Distance: %dm\n Effort: %d%\n Recovery Jog: %dm\n Rest: %d", distance, intensity, recovery, rest);
 	}
 	private int calculateDifficulty()
 	{
