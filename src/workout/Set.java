@@ -13,4 +13,10 @@ public interface Set {
 	public int getRest();
 	
 	public int getDistance();
+	
+	public String tostring();
+	
+	public String pack();
+	
+	
 }

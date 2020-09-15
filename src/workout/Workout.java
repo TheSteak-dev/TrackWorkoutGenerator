@@ -37,6 +37,11 @@ public class Workout {
 				Set set = decode(reps);
 				addSet(set);
 				totalDistance += set.getDistance();
+				reps.clear();
+			}
+			else
+			{
+				reps.add(line);
 			}
 		}
 		difficulty = calculateDifficulty();
@@ -55,6 +60,11 @@ public class Workout {
 //	}
 	
 	public String toString()
+	{
+		return "";
+	}
+	
+	public String pack()
 	{
 		return "";
 	}

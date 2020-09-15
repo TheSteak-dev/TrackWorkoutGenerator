@@ -2,7 +2,8 @@ package workout;
 
 //another class that is a set
 
-public class Straight implements Set {
+public class Straight implements Set
+{
 
 	private Rep[] reps;
 	private int type;
@@ -10,7 +11,8 @@ public class Straight implements Set {
 	private int rest;
 	private int totalDistance;
 	
-	public Straight(int type) {
+	public Straight(int type)
+{
 		// TODO generate
 	}
 	
@@ -29,22 +31,26 @@ public class Straight implements Set {
 	}
 
 	@Override
-	public int getDifficulty() {
+	public int getDifficulty() 
+	{
 		return difficulty;
 	}
 
 	@Override
-	public Rep[] getReps() {
+	public Rep[] getReps()
+	{
 		return reps;
 	}
 
 	@Override
-	public int getType() {
+	public int getType() 
+	{
 		return type;
 	}
 
 	@Override
-	public int getRest() {
+	public int getRest() 
+	{
 		return rest;
 	}
 	
@@ -71,9 +77,21 @@ public class Straight implements Set {
 		
 	}
 	@Override
-	public int getDistance() {
+	public int getDistance() 
+	{
 		return totalDistance;
 	}
+	@Override
+	public String tostring()
+	{
+		return "";
+	}
+	@Override
+	public String pack() 
+	{
+		return null;
+	}
+	
 
 	
 

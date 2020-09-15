@@ -1,6 +1,7 @@
 package workout;
 
-public class Ladder implements Set {
+public class Ladder implements Set 
+{
 
 	private Rep[] reps;
 	private int type;
@@ -8,7 +9,8 @@ public class Ladder implements Set {
 	private int rest;
 	private int totalDistance;
 	
-	public Ladder(int type) {
+	public Ladder(int type) 
+	{
 		// TODO generate workout
 	}
 	
@@ -27,22 +29,26 @@ public class Ladder implements Set {
 	}
 
 	@Override
-	public int getDifficulty() {
+	public int getDifficulty() 
+	{
 		return difficulty;
 	}
 
 	@Override
-	public Rep[] getReps() {
+	public Rep[] getReps() 
+	{
 		return reps;
 	}
 
 	@Override
-	public int getType() {
+	public int getType() 
+	{
 		return type;
 	}
 
 	@Override
-	public int getRest() {
+	public int getRest() 
+	{
 		return rest;
 	}
 	
@@ -69,9 +75,23 @@ public class Ladder implements Set {
 		
 	}
 	@Override
-	public int getDistance() {
+	public int getDistance() 
+	{
 		return totalDistance;
 	}
+	@Override
+	public String tostring()
+	{
+		return "";
+	}
+
+	@Override
+	public String pack() 
+	{
+		return null;
+	}
+	
+	
 
 
 }
