@@ -9,6 +9,7 @@ public class Straight implements Set
 	private int type;
 	private int difficulty;
 	private int rest;
+	private int repNum;
 	private int totalDistance;
 	
 	public Straight(int type)
@@ -17,16 +18,17 @@ public class Straight implements Set
 	}
 	
 	//build off input
-	public Straight(int type, String _rep, int reps, int rest)
+	public Straight(int type, String _rep, int repNum, int rest)
 	{
-		this.reps = new Rep[reps];
+		this.reps = new Rep[repNum];
 		this.rest = rest;
+		this.repNum = repNum;
 		Rep decoded = decode(_rep);
-		for (int i = 0; i < reps; i++)
+		for (int i = 0; i < repNum; i++)
 		{
 			this.reps[i] = decoded;
 		}
-		totalDistance = decoded.getDistance() * reps;
+		totalDistance = decoded.getDistance() * repNum;
 		difficulty = calculateDifficulty();
 	}
 
@@ -84,12 +86,12 @@ public class Straight implements Set
 	@Override
 	public String tostring()
 	{
-		return "";
+		return String.format("%d x %s\n Rest: %d seconds", repNum, reps[0]);
 	}
 	@Override
 	public String pack() 
 	{
-		return null;
+		return String.format("%d\n%s\n%d\n%d\nend\n", type, reps[0], repNum, rest);
 	}
 	
 

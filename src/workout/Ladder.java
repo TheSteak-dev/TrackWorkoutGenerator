@@ -82,13 +82,17 @@ public class Ladder implements Set
 	@Override
 	public String tostring()
 	{
-		return "";
+		return String.format("%s\n Rest: %d seconds", reps.toString(), rest);
 	}
 
 	@Override
 	public String pack() 
 	{
-		return null;
+		String temp = "";
+		for (Rep run : reps)
+			temp += run.tostring() + "-";
+		
+		return String.format("%d\n%s\n%d", type, temp.substring(0, temp.length() - 2), rest);
 	}
 	
 	

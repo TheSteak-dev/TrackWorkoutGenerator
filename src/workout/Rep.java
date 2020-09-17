@@ -47,9 +47,9 @@ public class Rep {
 		//in format [distance;intensity;recovery;rest,difficulty]
 		return String.format("%d;%d;%d;%d", distance, intensity, recovery, rest);
 	}
-	public String toString()
+	public String tostring()
 	{
-		return String.format("Distance: %dm\n Effort: %d%\n Recovery Jog: %dm\n Rest: %d", distance, intensity, recovery, rest);
+		return String.format("Distance: %dm\t Effort: %d%\t Recovery Jog: %dm\t Rest: %d seconds\n", distance, intensity, recovery, rest);
 	}
 	private int calculateDifficulty()
 	{
