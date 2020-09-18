@@ -61,12 +61,22 @@ public class Workout {
 	
 	public String toString()
 	{
-		return "";
+		String text = "";
+		for (Set set : sets)
+		{
+			text += set.tostring();
+		}
+		return text;
 	}
 	
 	public String pack()
 	{
-		return "";
+		String text = type + "";
+		for (Set set : sets)
+		{
+			text += set.pack();
+		}
+		return text;
 	}
 	
 	public int getType()
