@@ -20,7 +20,7 @@ public class Workout {
 	
 	public Workout(int type, String fileName) 
 	{
-
+		LogWriter.write("Workout Loaded: " + fileName);
 		this.type = -1;
 		totalDistance = 0;
 		sets =  new Set[0];
