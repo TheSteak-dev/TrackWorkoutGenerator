@@ -45,6 +45,8 @@ public class GraphicsFrame {
 			presetWorkouts = new Workout[0];
 			savedWorkouts = new Workout[0];
 		}
+		Workout test = new Workout("res/premade/one.txt");
+		System.out.println(test.toString());
 	}
 	
 	public void start()
