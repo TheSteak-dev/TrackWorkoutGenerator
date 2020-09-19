@@ -1,5 +1,7 @@
 package workout;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,27 +13,37 @@ public class Workout {
 	private final int difficulty;
 	private int totalDistance;
 	private Scanner scanner;
-	private final int type;
+	private int type;
 	
 	public static final int SPEED = 1234;
 	public static final int SPEEDENDURANCE1 = 2345;
 	public static final int SPEEDENDURANCE2 = 3456;
 	public static final int ENDURANCE = 4567;
 	
-	public Workout(int type, String fileName) 
+	public Workout(String fileName) 
 	{
 		LogWriter.write("Workout Loaded: " + fileName);
 		this.type = -1;
 		totalDistance = 0;
 		sets =  new Set[0];
-		
-		
-		scanner = new Scanner(fileName);
+
+		try
+		{
+			scanner = new Scanner(new File(fileName));
+		}
+		catch (FileNotFoundException e) 
+		{
+
+			e.printStackTrace();
+		}
 		type = scanner.nextInt();
-		ArrayList<String>  reps = new ArrayList<String>();
+		scanner.nextLine(); //eating a line
+		
+		ArrayList<String> reps = new ArrayList<String>();
 		while(scanner.hasNextLine())
 		{
 			String line = scanner.nextLine();
+			if (line.equals("terminate")) break;
 			if (line.equals("end"))
 			{
 				Set set = decode(reps);
