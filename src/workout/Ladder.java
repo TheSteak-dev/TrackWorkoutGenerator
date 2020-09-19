@@ -90,7 +90,7 @@ public class Ladder implements Set
 	{
 		String temp = "";
 		for (Rep run : reps)
-			temp += run.tostring() + "-";
+			temp += run.toString() + "-";
 		
 		return String.format("%d\n%s\n%d", type, temp.substring(0, temp.length() - 2), rest);
 	}

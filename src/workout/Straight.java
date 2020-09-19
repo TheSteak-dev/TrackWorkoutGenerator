@@ -64,18 +64,8 @@ public class Straight implements Set
 	
 	private Rep decode(String rep) //def a easier way to do this, but nah not now
 	{
-		int a, b, c, d, i, j;
-		i = 0;
-		j = 0;
-		i = rep.indexOf(';', j);
-		a = Integer.parseInt(rep.substring(j,i));
-		j = rep.indexOf(';', i);
-		b = Integer.parseInt(rep.substring(i, j));
-		i = rep.indexOf(';', j);
-		c = Integer.parseInt(rep.substring(j,i));
-		j = rep.indexOf(';', i);
-		d = Integer.parseInt(rep.substring(i, j));
-		return new Rep(a, b, c, d);
+		String[] nums = rep.split(";");
+		return new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3]));
 		
 	}
 	@Override
@@ -86,12 +76,12 @@ public class Straight implements Set
 	@Override
 	public String tostring()
 	{
-		return String.format("%d x %s\n Rest: %d seconds", repNum, reps[0]);
+		return String.format("%d x %sRest: %d seconds\n", repNum, reps[0].toString(), rest);
 	}
 	@Override
 	public String pack() 
 	{
-		return String.format("%d\n%s\n%d\n%d\nend\n", type, reps[0], repNum, rest);
+		return String.format("%d\n%s\n%d\n%d\nend\n", type, reps[0].pack(), repNum, rest);
 	}
 	
 
