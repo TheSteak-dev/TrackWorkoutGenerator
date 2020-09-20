@@ -42,7 +42,7 @@ public class GraphicsFrame {
 		back = new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {back();}};
 		{
 			//load pre-made and saved
-			presetWorkouts = new Workout[0];
+			presetWorkouts = new Workout[] {new Workout("res/premade/one.txt")};
 			savedWorkouts = new Workout[0];
 		}
 		Workout test = new Workout("res/premade/one.txt");
