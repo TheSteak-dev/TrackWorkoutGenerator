@@ -1,2 +1,3 @@
-[2020-09-18T21:16:18.430] started
-[2020-09-18T21:16:18.642] Workout Loaded: res/premade/one.txt
+[2020-09-19T20:55:23.844] started
+[2020-09-19T20:55:24.041] Workout Loaded: res/premade/one.txt
+[2020-09-19T20:55:24.058] Workout Loaded: res/premade/one.txt
