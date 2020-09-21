@@ -3,6 +3,7 @@ package workout;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -41,12 +42,19 @@ public class GraphicsFrame {
 		stack = new PanelStack(MAXFRAMES);
 		back = new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {back();}};
 		{
-			//load pre-made and saved
-			presetWorkouts = new Workout[] {new Workout("res/premade/one.txt")};
-			savedWorkouts = new Workout[0];
+			File preset = new File ("res/premade");
+			presetWorkouts = new Workout[preset.listFiles().length];
+			for (int i = 0; i < preset.listFiles().length; i++)
+			{
+				presetWorkouts[i] = new Workout(preset.listFiles()[i].toString());
+			}
+			File saved = new File("res/saved");
+			savedWorkouts = new Workout[saved.listFiles().length];
+			for (int i = 0; i < saved.listFiles().length; i++)
+			{
+				savedWorkouts[i] = new Workout(saved.listFiles()[i].toString());
+			}
 		}
-		Workout test = new Workout("res/premade/one.txt");
-		System.out.println(test.toString());
 	}
 	
 	public void start()
@@ -79,7 +87,7 @@ public class GraphicsFrame {
 		
 		savedCB= new JComboBox<Workout>(savedWorkouts);
 		savedCB.setEditable(false);
-		savedCB.setBounds(180, 200, 140, 30);
+		savedCB.setBounds(80, 100, 340, 30);
 		savedCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {System.out.println("hye");}});
 		
 		loadSavedPage.add(savedLogo);
@@ -93,7 +101,7 @@ public class GraphicsFrame {
 		
 		presetCB= new JComboBox<Workout>(presetWorkouts);
 		presetCB.setEditable(false);
-		presetCB.setBounds(180, 200, 140, 30);
+		presetCB.setBounds(80, 100, 340, 30);
 		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {System.out.println("hi");}});
 		
 
