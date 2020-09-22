@@ -54,7 +54,23 @@ public class Rep {
 	private int calculateDifficulty()
 	{
 		//TODO set difficulty
-		return 0;
+		int difficulty = 0;
+		int distdiff = (int)(Math.pow(distance, 0.6) * 210); //1, 2
+		int intediff = (int)(Math.pow(intensity, 1.4) * 5); //2, 1
+		int recodiff = (int)(recovery * 3.5); //4, 4
+		int restdiff = (int)(rest * 25); //3, 3
+		difficulty = distdiff + intediff - recodiff - restdiff;
+		System.out.println(difficulty + " Distance: " + distdiff + " Intensity: " + intediff + " Recovery: " + recodiff + " Rest: " + restdiff);
+		return difficulty / 100;
+	}
+	public static void main(String[] args)
+	{
+		Rep rep1 = new Rep(200, 200, 90, 95);
+		Rep rep2 = new Rep(400, 200, 90, 90);
+		Rep rep3 = new Rep(800, 200, 90, 80);
+		rep1.getDifficulty();
+		rep2.getDifficulty();
+		rep3.getDifficulty();
 	}
 	
 }
