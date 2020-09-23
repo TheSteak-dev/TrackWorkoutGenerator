@@ -54,8 +54,12 @@ public class Ladder implements Set
 	
 	private int calculateDifficulty()
 	{
-		//TODO
-		return 0;
+		int total = 0;
+		for (Rep rep: reps)
+		{
+			total += rep.getDifficulty();
+		}
+		return total;
 	}
 	
 	private Rep decode(String rep) //def a easier way to do this, but nah not now
