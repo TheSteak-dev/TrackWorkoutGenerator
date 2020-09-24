@@ -60,7 +60,10 @@ public class Straight implements Set
 	{
 		int total = 0;
 		total = repNum * reps[0].getDifficulty();
-		return total;
+		int restdiff = rest * 4;
+		System.out.println(total + " Rest: " + restdiff);
+
+		return total - restdiff;
 	}
 	
 	private Rep decode(String rep) //def a easier way to do this, but nah not now
