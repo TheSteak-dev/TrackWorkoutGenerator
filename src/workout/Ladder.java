@@ -59,7 +59,9 @@ public class Ladder implements Set
 		{
 			total += rep.getDifficulty();
 		}
-		return total;
+		int restdiff = rest * 30;
+		System.out.println(total + " Rest: " + restdiff);
+		return total - restdiff;
 	}
 	
 	private Rep decode(String rep) //def a easier way to do this, but nah not now
