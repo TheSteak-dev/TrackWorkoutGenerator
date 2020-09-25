@@ -120,7 +120,13 @@ public class Workout {
 	}
 	private int calculateDifficulty()
 	{
-		return 0;
+		int total = 0;
+		for (Set set : sets)
+		{
+			total += set.getDifficulty();
+		}
+		System.out.println(total);
+		return total;
 	}
 	private Set decode(ArrayList<String> array)
 	{

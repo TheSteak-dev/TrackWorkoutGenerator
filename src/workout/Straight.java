@@ -27,6 +27,7 @@ public class Straight implements Set
 		for (int i = 0; i < repNum; i++)
 		{
 			this.reps[i] = decoded;
+			System.out.println(decoded + " + " + decoded.getDifficulty());
 		}
 		totalDistance = decoded.getDistance() * repNum;
 		difficulty = calculateDifficulty();
@@ -59,7 +60,7 @@ public class Straight implements Set
 	private int calculateDifficulty()
 	{
 		int total = 0;
-		total = repNum * reps[0].getDifficulty();
+		total = reps[0].getDifficulty();
 		int restdiff = rest * 4;
 		System.out.println(total + " Rest: " + restdiff);
 
