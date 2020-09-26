@@ -1,3 +1,4 @@
-[2020-09-24T20:15:24.402] started
-[2020-09-24T20:15:24.675] Workout Loaded: res\premade\one.txt
-[2020-09-24T20:15:24.707] Workout Loaded: res\premade\two.txt
+[2020-09-25T20:04:45.229] started
+[2020-09-25T20:04:45.478] Workout Loaded: res\premade\one.txt
+[2020-09-25T20:04:45.502] Workout Loaded: res\premade\two.txt
+[2020-09-25T20:04:48.069] selected | preset | 1
