@@ -102,7 +102,7 @@ public class GraphicsFrame {
 		presetCB= new JComboBox<Workout>(presetWorkouts);
 		presetCB.setEditable(false);
 		presetCB.setBounds(80, 100, 340, 30);
-		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {System.out.println("hi");}});
+		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {display(presetCB.getSelectedIndex(), "preset");}});
 		
 
 		presetLogo = new JLabel("Preset");
@@ -163,6 +163,15 @@ public class GraphicsFrame {
 		//pane.validate();
 		pane.repaint();
 		//System.out.println("finished");
+	}
+	private String display(int i, String system)
+	{
+		if (system.equals("preset"))
+		{
+			LogWriter.write("selected | preset | " + i);
+			return presetWorkouts[i].toprint();
+		}
+		return "failed to load";
 	}
 
 }
