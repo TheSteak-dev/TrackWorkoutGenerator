@@ -148,7 +148,6 @@ public class GraphicsFrame {
 	
 	private void goToScreen(JPanel panel) //go to a screen, and put it on the stack
 	{
-		//System.out.println("Going To Page" + panel);
 		pane.remove(stack.current());
 		pane.add(panel);
 		stack.append(panel);
@@ -160,9 +159,7 @@ public class GraphicsFrame {
 	{
 		pane.remove(stack.pop());
 		pane.add(stack.current());
-		//pane.validate();
 		pane.repaint();
-		//System.out.println("finished");
 	}
 	private String display(int i, String system)
 	{
