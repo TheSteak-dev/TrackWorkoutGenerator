@@ -10,3 +10,4 @@ end
 <times>
 <rest>
 end
+terminate
