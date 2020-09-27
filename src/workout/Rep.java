@@ -56,7 +56,7 @@ public class Rep {
 		//TODO set difficulty
 		int difficulty = 0;
 		int distdiff = (int)(Math.pow(distance, 0.6) * 200); //1, 2
-		int intediff = (int)(Math.pow(intensity, 1.9) * 0.7); //2, 1
+		int intediff = (int)(Math.pow(intensity, 1.85) * 0.7); //2, 1
 		int recodiff = (int)(recovery * 3.5); //4, 4
 		int restdiff = (int)(rest * 15); //3, 3
 		difficulty = distdiff + intediff - recodiff - restdiff;
