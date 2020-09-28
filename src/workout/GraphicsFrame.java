@@ -10,6 +10,8 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
 
 
 public class GraphicsFrame {
@@ -23,6 +25,8 @@ public class GraphicsFrame {
 	private JButton loadSaved, loadPreset, loadRandom, presetBack, savedBack, randomBack;
 	
 	private JLabel  menuLogo, presetLogo, savedLogo, randomLogo;
+	
+	private JTextArea presetBox, savedBox, randomBox;
 	
 	private JComboBox<Workout> presetCB, savedCB;
 	
@@ -102,15 +106,19 @@ public class GraphicsFrame {
 		presetCB= new JComboBox<Workout>(presetWorkouts);
 		presetCB.setEditable(false);
 		presetCB.setBounds(80, 100, 340, 30);
-		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {display(presetCB.getSelectedIndex(), "preset");}});
+		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {presetBox.setText(display(presetCB.getSelectedIndex(), "preset"));}});
 		
+		presetBox = new JTextArea("Choose a Workout");
+		presetBox.setEditable(false);
+		presetBox.setBounds(40, 140, 420, 200);
 
 		presetLogo = new JLabel("Preset");
-		presetLogo.setBounds(230, 000, 40, 20);
+		presetLogo.setBounds(230, 0, 40, 20);
 		
 		loadPresetPage.add(presetLogo);
 		loadPresetPage.add(presetBack);
 		loadPresetPage.add(presetCB);
+		loadPresetPage.add(presetBox);
 		
 		//set jComponents for menu
 		
