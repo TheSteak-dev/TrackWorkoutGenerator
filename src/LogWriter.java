@@ -1,4 +1,4 @@
-package workout;
+
 
 //just a log writer
 import java.io.FileWriter;

@@ -1,4 +1,3 @@
-package workout;
 
 import javax.swing.JPanel;
 
