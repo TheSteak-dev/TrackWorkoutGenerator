@@ -1,16 +1,18 @@
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.SwingConstants;
+import javax.swing.border.Border;
 
 
 public class GraphicsFrame {
@@ -37,9 +39,12 @@ public class GraphicsFrame {
 	
 	private ActionListener back;
 	
+	private final Border INFOBOXBORDER;
+	
 
 	public GraphicsFrame() 
 	{
+		INFOBOXBORDER = BorderFactory.createLineBorder(Color.black, 2);
 		frame = new JFrame("Workout Generator");
 		pane = frame.getContentPane();
 		stack = new PanelStack(MAXFRAMES);
@@ -77,8 +82,14 @@ public class GraphicsFrame {
 		randomBack.setBounds(1, 450, 70, 20);
 		randomBack.addActionListener(back);
 		
+		randomBox = new JTextArea("Not Implemented");
+		randomBox.setEditable(false);
+		randomBox.setBounds(40, 140, 420, 200);
+		randomBox.setBorder(INFOBOXBORDER);
+		
 		loadRandomPage.add(randomLogo);
 		loadRandomPage.add(randomBack);
+		loadRandomPage.add(randomBox);
 		
 		//set jComponents for savedPage
 		savedLogo = new JLabel("Saved");
@@ -93,9 +104,15 @@ public class GraphicsFrame {
 		savedCB.setBounds(80, 100, 340, 30);
 		savedCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {System.out.println("hye");}});
 		
+		savedBox = new JTextArea("Not Implemented");
+		savedBox.setEditable(false);
+		savedBox.setBounds(40, 140, 420, 200);
+		savedBox.setBorder(INFOBOXBORDER);
+		
 		loadSavedPage.add(savedLogo);
 		loadSavedPage.add(savedBack);
 		loadSavedPage.add(savedCB);
+		loadSavedPage.add(savedBox);
 		
 		//set jComponents for presetPage
 		presetBack = new JButton("Back");
@@ -110,6 +127,7 @@ public class GraphicsFrame {
 		presetBox = new JTextArea("Choose a Workout");
 		presetBox.setEditable(false);
 		presetBox.setBounds(40, 140, 420, 200);
+		presetBox.setBorder(INFOBOXBORDER);
 
 		presetLogo = new JLabel("Preset");
 		presetLogo.setBounds(230, 0, 40, 20);
