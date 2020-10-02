@@ -193,6 +193,12 @@ public class GraphicsFrame {
 			LogWriter.write("selected | preset | " + i);
 			return presetWorkouts[i].toprint();
 		}
+		else if (system.equals("saved"))
+		{
+			LogWriter.write("selected | saved | " + i);
+			return savedWorkouts[i].toprint();
+		}
+		LogWriter.write("failed to load");
 		return "failed to load";
 	}
 
