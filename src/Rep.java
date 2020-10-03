@@ -21,7 +21,8 @@ public class Rep {
 	public Rep(int difficulty)
 	{
 		//TODO generate
-		distance = (int)Math.pow(Math.random() * 100, 2.3); 
+		distance = (int)Math.pow(Math.random() * 100, 2.3);
+		intensity = (int)Math.pow(Math.random() * 80, 1.1);
 	}
 	public int getDistance()
 	{
