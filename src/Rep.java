@@ -23,6 +23,7 @@ public class Rep {
 		//TODO generate
 		distance = (int)Math.pow(Math.random() * 100, 2.3);
 		intensity = (int)Math.pow(Math.random() * 80, 1.1);
+		recovery = (int)(Math.random() * 10) * 100;
 	}
 	public int getDistance()
 	{
