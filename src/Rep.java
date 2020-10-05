@@ -24,6 +24,8 @@ public class Rep {
 		distance = (int)Math.pow(Math.random() * 100, 2.3);
 		intensity = (int)Math.pow(Math.random() * 80, 1.1);
 		recovery = (int)(Math.random() * 10) * 100;
+		rest = (int)(Math.random() * 2 + 1) * 30;
+		difficulty = calculateDifficulty();
 	}
 	public int getDistance()
 	{
