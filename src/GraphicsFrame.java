@@ -62,6 +62,7 @@ public class GraphicsFrame {
 			{
 				savedWorkouts[i] = new Workout(saved.listFiles()[i].toString());
 			}
+			//418, -280
 		}
 	}
 	
