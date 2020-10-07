@@ -20,12 +20,11 @@ public class Rep {
 	}
 	public Rep(int difficulty)
 	{
-		//TODO generate
-		distance = (int)Math.pow(Math.random() * 100, 2.3);
-		intensity = (int)Math.pow(Math.random() * 80, 1.1);
-		recovery = (int)(Math.random() * 10) * 100;
-		rest = (int)(Math.random() * 2 + 1) * 30;
-		difficulty = calculateDifficulty();
+		//TODO works, but not fast, needs to just calibrate the current values
+		while (Math.abs(calculateDifficulty() - difficulty) > 500)
+		{
+			generate();
+		}
 	}
 	public int getDistance()
 	{
@@ -55,6 +54,13 @@ public class Rep {
 	public String toString()
 	{
 		return String.format("Distance: %dm\t Effort: %d%%\t Recovery Jog: %dm\t Rest: %d seconds\n", distance, intensity, recovery, rest);
+	}
+	private void generate()
+	{
+		distance = (int)Math.pow(Math.random() * 100, 2.3);
+		intensity = (int)Math.pow(Math.random() * 80, 1.1);
+		recovery = (int)(Math.random() * 10) * 100;
+		rest = (int)(Math.random() * 2 + 1) * 30;
 	}
 	private int calculateDifficulty()
 	{
