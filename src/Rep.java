@@ -20,10 +20,22 @@ public class Rep {
 	}
 	public Rep(int difficulty)
 	{
+		generate();
+		difficulty = calculateDifficulty();
 		//TODO works, but not fast, needs to just calibrate the current values
-		while (Math.abs(calculateDifficulty() - difficulty) > 500)
+		while (Math.abs(this.difficulty - difficulty) > 500)
 		{
-			generate();
+			if (difficulty < this.difficulty)
+			{
+				//TODO make it easier
+				this.difficulty = calculateDifficulty();
+				
+			}
+			else if (difficulty > this.difficulty)
+			{
+				//TODO make it harder
+				this.difficulty = calculateDifficulty();
+			}
 		}
 	}
 	public int getDistance()
