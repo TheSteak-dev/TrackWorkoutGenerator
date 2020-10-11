@@ -78,10 +78,10 @@ public class Rep {
 	{
 		//TODO set difficulty
 		int difficulty = 0;
-		int distdiff = (int)(Math.pow(distance, 0.6) * 200); //1, 2
-		int intediff = (int)(Math.pow(intensity, 1.85) * 0.7); //2, 1
-		int recodiff = (int)(recovery * 3.5); //4, 4
-		int restdiff = (int)(rest * 15); //3, 3
+		int distdiff = (int)(Math.pow(distance, 0.6) * 200); //biggest
+		int intediff = (int)(Math.pow(intensity, 1.85) * 0.7); //second biggest
+		int recodiff = (int)(recovery * 3.5); //least
+		int restdiff = (int)(rest * 15); //second least
 		difficulty = distdiff + intediff - recodiff - restdiff;
 		System.out.println(difficulty + " Distance: " + distdiff + " Intensity: " + intediff + " Recovery: " + recodiff + " Rest: " + restdiff);
 		return difficulty;
