@@ -67,12 +67,20 @@ public class Rep {
 	{
 		return String.format("Distance: %dm\t Effort: %d%%\t Recovery Jog: %dm\t Rest: %d seconds\n", distance, intensity, recovery, rest);
 	}
-	private void generate() //need to make sure they are in a format
+	private void generate()
 	{
 		distance = (int)Math.pow(Math.random() * 100, 2.3);
 		intensity = (int)Math.pow(Math.random() * 80, 1.1);
 		recovery = (int)(Math.random() * 10) * 100;
 		rest = (int)(Math.random() * 2 + 1) * 30;
+		round();
+	}
+	private void round()
+	{
+		distance = Math.round(distance / 100) * 100;
+		intensity = Math.round(intensity / 5) * 5;
+		recovery = Math.round(recovery/ 50) * 50;
+		rest = Math.round(rest / 30) * 30;
 	}
 	private int calculateDifficulty()
 	{
