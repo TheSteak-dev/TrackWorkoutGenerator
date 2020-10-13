@@ -23,6 +23,7 @@ public class Rep {
 		generate();
 		difficulty = calculateDifficulty();
 		//TODO works, but not fast, needs to just calibrate the current values
+		int changes = 0;
 		while (Math.abs(this.difficulty - difficulty) > 500)
 		{
 			if (difficulty < this.difficulty)
