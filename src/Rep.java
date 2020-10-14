@@ -26,6 +26,7 @@ public class Rep {
 		int changes = 0;
 		while (Math.abs(this.difficulty - difficulty) > 500)
 		{
+			changes = changes % 5;
 			if (difficulty < this.difficulty)
 			{
 				//TODO make it easier
