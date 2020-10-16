@@ -4,10 +4,7 @@ public class Ladder implements Set
 {
 
 	private Rep[] reps;
-	private int type;
-	private int difficulty;
-	private int rest;
-	private int totalDistance;
+	private int type, difficulty, rest, totalDistance;
 	
 	public Ladder(int type) 
 	{
