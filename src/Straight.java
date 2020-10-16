@@ -6,11 +6,7 @@ public class Straight implements Set
 {
 
 	private Rep[] reps;
-	private int type;
-	private int difficulty;
-	private int rest;
-	private int repNum;
-	private int totalDistance;
+	private int type, difficulty, rest, repNum, totalDistance;
 	
 	public Straight(int type)
 {
