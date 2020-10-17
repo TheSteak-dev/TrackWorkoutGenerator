@@ -8,7 +8,14 @@ public class Ladder implements Set
 	
 	public Ladder(int type) 
 	{
-		// TODO generate workout
+		if (Math.random() < 0.5)
+		{
+			//TODO step up
+		}
+		else
+		{
+			//TODO step down
+		}
 	}
 	
 	//build off reading in
