@@ -29,15 +29,25 @@ public class Rep {
 			changes = changes % 5;
 			if (difficulty < this.difficulty)
 			{
-				//TODO make it easier
-				this.difficulty = calculateDifficulty();
+				if (changes == 0) distance--;
+				else if (changes == 1) intensity--;
+				else if (changes == 2) recovery++;
+				else if (changes == 3) rest++;
+				round();
 				
+				this.difficulty = calculateDifficulty();
 			}
 			else if (difficulty > this.difficulty)
 			{
-				//TODO make it harder
+				if (changes == 0) distance++;
+				else if (changes == 1) intensity++;
+				else if (changes == 2) recovery--;
+				else if (changes == 3) rest--;
+				round();
+				
 				this.difficulty = calculateDifficulty();
 			}
+			changes ++;
 		}
 	}
 	public int getDistance()
