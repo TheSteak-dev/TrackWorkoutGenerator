@@ -29,7 +29,7 @@ public class Rep {
 			changes = changes % 5;
 			if (difficulty < this.difficulty)
 			{
-				if (changes == 0) distance--;
+				if (changes == 0) distance -= Math.random() * 200;
 				else if (changes == 1) intensity--;
 				else if (changes == 2) recovery++;
 				else if (changes == 3) rest++;
@@ -39,7 +39,7 @@ public class Rep {
 			}
 			else if (difficulty > this.difficulty)
 			{
-				if (changes == 0) distance++;
+				if (changes == 0) distance += Math.random() * 200;
 				else if (changes == 1) intensity++;
 				else if (changes == 2) recovery--;
 				else if (changes == 3) rest--;
