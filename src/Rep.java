@@ -101,8 +101,9 @@ public class Rep {
 		int intediff = (int)(Math.pow(intensity, 1.85) * 0.7);
 		int recodiff = (int)(recovery * 3.5);
 		int restdiff = (int)(rest * 15);
-		difficulty = distdiff + intediff - recodiff - restdiff;
-		System.out.println(difficulty + " Distance: " + distdiff + " Intensity: " + intediff + " Recovery: " + recodiff + " Rest: " + restdiff);
+		int extradiff = (int)(Math.pow(distance, 0.2) * intensity * 2);
+		difficulty = distdiff + intediff - recodiff - restdiff + extradiff;
+		//System.out.println(difficulty + " Distance: " + distdiff + " Intensity: " + intediff + " Recovery: " + recodiff + " Rest: " + restdiff);
 		return difficulty;
 	}
 
