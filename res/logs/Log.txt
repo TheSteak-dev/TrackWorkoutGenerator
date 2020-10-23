@@ -1,4 +1,4 @@
-[2020-10-21T19:21:13.118] started
-[2020-10-21T19:21:13.373] Workout Loaded: res\premade\one.txt
-[2020-10-21T19:21:13.393] Workout Loaded: res\premade\three.txt
-[2020-10-21T19:21:13.396] Workout Loaded: res\premade\two.txt
+[2020-10-21T20:46:27.123] started
+[2020-10-21T20:46:27.341] Workout Loaded: res\premade\one.txt
+[2020-10-21T20:46:27.363] Workout Loaded: res\premade\three.txt
+[2020-10-21T20:46:27.366] Workout Loaded: res\premade\two.txt
