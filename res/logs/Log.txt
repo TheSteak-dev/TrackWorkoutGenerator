@@ -1,3 +1,12 @@
-[2020-10-29T13:08:17.364] started
-[2020-10-29T13:08:17.633] Workout Loaded: res\premade\1.txt
-[2020-10-29T13:08:17.664] Workout Loaded: res\premade\10.txt
+[2020-10-29T19:20:31.175] started
+[2020-10-29T19:20:31.443] Workout Loaded: res\premade\1.txt
+[2020-10-29T19:20:31.474] Workout Loaded: res\premade\10.txt
+[2020-10-29T19:20:31.478] Workout Loaded: res\premade\2.txt
+[2020-10-29T19:20:31.482] Workout Loaded: res\premade\3.txt
+[2020-10-29T19:20:31.487] Workout Loaded: res\premade\4.txt
+[2020-10-29T19:20:31.491] Workout Loaded: res\premade\5.txt
+[2020-10-29T19:20:31.494] Workout Loaded: res\premade\6.txt
+[2020-10-29T19:20:31.499] Workout Loaded: res\premade\7.txt
+[2020-10-29T19:20:31.504] Workout Loaded: res\premade\8.txt
+[2020-10-29T19:20:31.510] Workout Loaded: res\premade\9.txt
+[2020-10-29T19:20:39.479] selected | preset | 7
