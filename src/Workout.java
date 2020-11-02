@@ -112,10 +112,10 @@ public class Workout {
 	}
 	public String toString()
 	{
-		if (type == 1234) return "Type: Speed | Difficulty : " + difficulty;
-		if (type == 2345) return "Type: Speed Endurance I | Difficulty : " + difficulty;
-		if (type == 3456) return "Type: Speed Endurance II| Difficulty : " + difficulty;
-		if (type == 4567) return "Type: Endurance | Difficulty : " + difficulty;
+		if (type == 1234) return "Type: Speed                          | Difficulty : " + difficulty;
+		if (type == 2345) return "Type: Speed Endurance I   | Difficulty : " + difficulty;
+		if (type == 3456) return "Type: Speed Endurance II  | Difficulty : " + difficulty;
+		if (type == 4567) return "Type: Endurance                  | Difficulty : " + difficulty;
 		return null;
 	}
 	private int calculateDifficulty()
