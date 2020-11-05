@@ -125,15 +125,23 @@ public class Workout {
 		{
 			total += set.getDifficulty();
 		}
-		System.out.println(total);
+		//System.out.println(total);
 		return total;
 	}
 	private Set decode(ArrayList<String> array)
 	{
 		if (array.size() == 3) //ladder
 		{
+			for (String bit : array)
+			{
+				System.out.println(bit);
+			}
 			int type = Integer.parseInt(array.get(0));
 			String[] reps = array.get(1).split("-");
+			for (String bit : reps)
+			{
+				System.out.println(bit);
+			}
 			int rest = Integer.parseInt(array.get(2));
 			return new Ladder(type, reps, rest);
 		}

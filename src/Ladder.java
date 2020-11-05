@@ -70,18 +70,13 @@ public class Ladder implements Set
 	
 	private Rep decode(String rep) //def a easier way to do this, but nah not now
 	{
-		int a, b, c, d, i, j;
-		i = 0;
-		j = 0;
-		i = rep.indexOf(';', j);
-		a = Integer.parseInt(rep.substring(j,i));
-		j = rep.indexOf(';', i);
-		b = Integer.parseInt(rep.substring(i, j));
-		i = rep.indexOf(';', j);
-		c = Integer.parseInt(rep.substring(j,i));
-		j = rep.indexOf(';', i);
-		d = Integer.parseInt(rep.substring(i, j));
-		return new Rep(a, b, c, d);
+		String[] nums = rep.split(";");
+		System.out.println("ladder: ");
+		for (String test : nums)
+		{
+			System.out.print(test);
+		}
+		return new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3]));
 		
 	}
 	@Override
