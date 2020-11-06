@@ -23,6 +23,7 @@ public class Ladder implements Set
 	{
 		this.rest = rest;
 		this.type = type;
+		reps = new Rep[stringReps.length];
 		for (int i = 0; i < stringReps.length; i++)
 		{
 			Rep rep = decode(stringReps[i]);
@@ -64,7 +65,7 @@ public class Ladder implements Set
 			total += rep.getDifficulty();
 		}
 		int restdiff = rest * 30;
-		System.out.println(total + " Rest: " + restdiff);
+		//System.out.println(total + " Rest: " + restdiff);
 		return total - restdiff;
 	}
 	
@@ -74,8 +75,9 @@ public class Ladder implements Set
 		System.out.println("ladder: ");
 		for (String test : nums)
 		{
-			System.out.print(test);
+			System.out.print(test + "-");
 		}
+		System.out.println(new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3])).toString());
 		return new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3]));
 		
 	}
@@ -87,7 +89,15 @@ public class Ladder implements Set
 	@Override
 	public String tostring()
 	{
-		return String.format("%s\n Rest: %d seconds", reps.toString(), rest);
+		String workout = "";
+		System.out.println(reps.length);
+		for (Rep rep : reps)
+		{
+			System.out.println(rep);
+			workout += rep;
+		}
+		System.out.println(workout);
+		return String.format("%s\n Rest: %d seconds", workout, rest);
 	}
 
 	@Override
