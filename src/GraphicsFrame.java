@@ -17,6 +17,8 @@ import javax.swing.border.Border;
 
 public class GraphicsFrame {
 	
+	private final String[] sortOptions = new String[] {"default"};
+	
 	private final int MAXFRAMES = 2;
 	
 	private JFrame frame;
@@ -30,6 +32,8 @@ public class GraphicsFrame {
 	private JTextArea presetBox, savedBox, randomBox;
 	
 	private JComboBox<Workout> presetCB, savedCB;
+	
+	private JComboBox<String> presetSortBy, savedSortBy;
 	
 	private Container pane;
 	
@@ -101,28 +105,46 @@ public class GraphicsFrame {
 		
 		savedCB= new JComboBox<Workout>(savedWorkouts);
 		savedCB.setEditable(false);
-		savedCB.setBounds(80, 100, 340, 30);
-		savedCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {System.out.println("hye");}});
+		savedCB.setBounds(40, 100, 340, 30);
+		savedCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {
+			System.out.println("hye");}});
 		
 		savedBox = new JTextArea("Not Implemented");
 		savedBox.setEditable(false);
 		savedBox.setBounds(40, 140, 420, 200);
 		savedBox.setBorder(INFOBOXBORDER);
 		
+		savedSortBy = new JComboBox<String>(sortOptions);
+		savedSortBy.setEditable(false);
+		savedSortBy.setBounds(390, 100, 100, 30);
+		savedSortBy.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {
+			changeSortBy("saved");
+			}});
+		
 		loadSavedPage.add(savedLogo);
 		loadSavedPage.add(savedBack);
 		loadSavedPage.add(savedCB);
 		loadSavedPage.add(savedBox);
+		loadSavedPage.add(savedSortBy);
 		
 		//set jComponents for presetPage
 		presetBack = new JButton("Back");
 		presetBack.setBounds(1, 450, 70, 20);
 		presetBack.addActionListener(back);
 		
-		presetCB= new JComboBox<Workout>(presetWorkouts);
+		presetCB = new JComboBox<Workout>(presetWorkouts);
 		presetCB.setEditable(false);
-		presetCB.setBounds(80, 100, 340, 30);
-		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {presetBox.setText(display(presetCB.getSelectedIndex(), "preset"));}});
+		presetCB.setBounds(40, 100, 340, 30);
+		presetCB.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {
+			presetBox.setText(display(presetCB.getSelectedIndex(), "preset"));}});
+		
+		presetSortBy = new JComboBox<String>(sortOptions);
+		presetSortBy.setEditable(false);
+		presetSortBy.setBounds(390, 100, 100, 30);
+		presetSortBy.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {
+			changeSortBy("preset");
+			}});
+
 		
 		presetBox = new JTextArea("Choose a Workout");
 		presetBox.setEditable(false);
@@ -136,6 +158,7 @@ public class GraphicsFrame {
 		loadPresetPage.add(presetBack);
 		loadPresetPage.add(presetCB);
 		loadPresetPage.add(presetBox);
+		loadPresetPage.add(presetSortBy);
 		
 		//set jComponents for menu
 		
@@ -153,6 +176,7 @@ public class GraphicsFrame {
 		loadRandom = new JButton("Load Random");
 		loadRandom.setBounds(180, 235, 140, 30);
 		loadRandom.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent arg0) {goToScreen(loadRandomPage);}});
+		
 		 
 		
 		//add jComponents
@@ -186,6 +210,12 @@ public class GraphicsFrame {
 		pane.add(stack.current());
 		pane.repaint();
 	}
+	
+	private void changeSortBy(String panel)
+	{
+		
+	}
+	
 	private String display(int i, String system)
 	{
 		if (system.equals("preset"))
