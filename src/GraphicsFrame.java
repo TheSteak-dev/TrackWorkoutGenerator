@@ -17,7 +17,7 @@ import javax.swing.border.Border;
 
 public class GraphicsFrame {
 	
-	private final String[] sortOptions = new String[] {"default"};
+	private final String[] sortOptions = new String[] {"default", "difficulty", ""};
 	
 	private final int MAXFRAMES = 2;
 	
