@@ -77,7 +77,7 @@ public class Rep {
 	}
 	public String toString()
 	{
-		return String.format("Distance: %dm\t Effort: %d%%\t Recovery Jog: %dm\t Rest: %d seconds\n", distance, intensity, recovery, rest);
+		return String.format("Distance: %dm\t Effort: %d%%\t Recovery: %dm\t Rest: %ds\n", distance, intensity, recovery, rest);
 	}
 	private void generate()
 	{
