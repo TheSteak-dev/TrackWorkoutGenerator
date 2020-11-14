@@ -213,7 +213,14 @@ public class GraphicsFrame {
 	
 	private void changeSortBy(String panel)
 	{
-		
+		if (panel == "preset")
+		{
+			String sortType = sortOptions[presetCB.getSelectedIndex()];
+		}
+		if (panel == "saved")
+		{
+			String sortType = sortOptions[savedCB.getSelectedIndex()];
+		}
 	}
 	
 	private String display(int i, String system)
