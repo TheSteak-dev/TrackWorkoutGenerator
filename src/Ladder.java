@@ -72,14 +72,6 @@ public class Ladder implements Set
 	private Rep decode(String rep) //def a easier way to do this, but nah not now
 	{
 		String[] nums = rep.split(";");
-		/*
-		System.out.println("ladder: ");
-		for (String test : nums)
-		{
-			System.out.print(test + "-");
-		}
-		System.out.println(new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3])).toString());
-		*/
 		return new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3]));
 		
 	}
@@ -99,7 +91,7 @@ public class Ladder implements Set
 			workout += rep;
 		}
 		//System.out.println(workout);
-		return String.format("%s\n Rest: %d seconds", workout, rest);
+		return String.format("%s\n Rest: %d seconds\n", workout, rest);
 	}
 
 	@Override
