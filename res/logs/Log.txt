@@ -1,20 +1,21 @@
-[2020-11-12T20:20:24.471] started
-[2020-11-12T20:20:24.736] Workout Loaded: res\premade\0001.txt
-[2020-11-12T20:20:24.759] Workout Loaded: res\premade\0002.txt
-[2020-11-12T20:20:24.762] Workout Loaded: res\premade\0003.txt
-[2020-11-12T20:20:24.764] Workout Loaded: res\premade\0004.txt
-[2020-11-12T20:20:24.767] Workout Loaded: res\premade\0005.txt
-[2020-11-12T20:20:24.771] Workout Loaded: res\premade\0006.txt
-[2020-11-12T20:20:24.776] Workout Loaded: res\premade\0007.txt
-[2020-11-12T20:20:24.779] Workout Loaded: res\premade\0008.txt
-[2020-11-12T20:20:24.784] Workout Loaded: res\premade\0009.txt
-[2020-11-12T20:20:24.791] Workout Loaded: res\premade\0010.txt
-[2020-11-12T20:20:24.794] Workout Loaded: res\premade\0011.txt
-[2020-11-12T20:20:24.797] Workout Loaded: res\premade\0012.txt
-[2020-11-12T20:20:24.801] Workout Loaded: res\premade\0013.txt
-[2020-11-12T20:20:24.805] Workout Loaded: res\premade\0014.txt
-[2020-11-12T20:20:24.808] Workout Loaded: res\premade\0015.txt
-[2020-11-12T20:20:24.810] Workout Loaded: res\premade\0016.txt
-[2020-11-12T20:20:24.812] Workout Loaded: res\premade\0017.txt
-[2020-11-12T20:20:24.817] Workout Loaded: res\premade\0018.txt
-[2020-11-12T20:20:27.267] selected | preset | 2
+[2020-11-14T20:56:56.122] started
+[2020-11-14T20:56:56.472] Workout Loaded: res\premade\0001.txt
+[2020-11-14T20:56:56.508] Workout Loaded: res\premade\0002.txt
+[2020-11-14T20:56:56.515] Workout Loaded: res\premade\0003.txt
+[2020-11-14T20:56:56.520] Workout Loaded: res\premade\0004.txt
+[2020-11-14T20:56:56.526] Workout Loaded: res\premade\0005.txt
+[2020-11-14T20:56:56.531] Workout Loaded: res\premade\0006.txt
+[2020-11-14T20:56:56.536] Workout Loaded: res\premade\0007.txt
+[2020-11-14T20:56:56.538] Workout Loaded: res\premade\0008.txt
+[2020-11-14T20:56:56.541] Workout Loaded: res\premade\0009.txt
+[2020-11-14T20:56:56.545] Workout Loaded: res\premade\0010.txt
+[2020-11-14T20:56:56.547] Workout Loaded: res\premade\0011.txt
+[2020-11-14T20:56:56.550] Workout Loaded: res\premade\0012.txt
+[2020-11-14T20:56:56.552] Workout Loaded: res\premade\0013.txt
+[2020-11-14T20:56:56.554] Workout Loaded: res\premade\0014.txt
+[2020-11-14T20:56:56.557] Workout Loaded: res\premade\0015.txt
+[2020-11-14T20:56:56.560] Workout Loaded: res\premade\0016.txt
+[2020-11-14T20:56:56.562] Workout Loaded: res\premade\0017.txt
+[2020-11-14T20:56:56.564] Workout Loaded: res\premade\0018.txt
+[2020-11-14T20:56:56.566] Workout Loaded: res\premade\0019.txt
+[2020-11-14T20:57:05.316] selected | preset | 18
