@@ -65,11 +65,10 @@ public class Ladder implements Set
 			total += rep.getDifficulty();
 		}
 		int restdiff = rest * 30;
-		//System.out.println(total + " Rest: " + restdiff);
 		return total - restdiff;
 	}
 	
-	private Rep decode(String rep) //def a easier way to do this, but nah not now
+	private Rep decode(String rep)
 	{
 		String[] nums = rep.split(";");
 		return new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3]));
@@ -84,13 +83,10 @@ public class Ladder implements Set
 	public String tostring()
 	{
 		String workout = "";
-		//System.out.println(reps.length);
 		for (Rep rep : reps)
 		{
-			//System.out.println(rep);
 			workout += rep;
 		}
-		//System.out.println(workout);
 		return String.format("%s\n Rest: %d seconds\n", workout, rest);
 	}
 
