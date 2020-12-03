@@ -1,3 +1,4 @@
+package graphics;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -13,6 +14,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.Border;
+
+import datastructure.Workout;
+import logging.LogWriter;
 
 
 public class GraphicsFrame {

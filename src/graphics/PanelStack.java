@@ -1,3 +1,4 @@
+package graphics;
 
 import javax.swing.JPanel;
 

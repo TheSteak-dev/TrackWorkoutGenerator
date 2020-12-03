@@ -1,3 +1,4 @@
+package logging;
 
 
 //just a log writer

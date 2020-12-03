@@ -1,5 +1,4 @@
-
-
+package datastructure;
 //another class that is a set
 
 public class Straight implements Set

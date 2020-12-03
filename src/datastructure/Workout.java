@@ -1,9 +1,12 @@
+package datastructure;
 
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import logging.LogWriter;
 
 //a class that represents a whole workout
 

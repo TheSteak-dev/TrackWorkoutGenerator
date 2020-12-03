@@ -1,5 +1,4 @@
-
-
+package datastructure;
 public class Ladder implements Set 
 {
 
