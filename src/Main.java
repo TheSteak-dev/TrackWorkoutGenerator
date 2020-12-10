@@ -6,7 +6,7 @@ public class Main
 
 	public static void main(String[] args) 
 	{
-		LogWriter.write("started");
+		LogWriter.write("Program Started");
 		GraphicsFrame frame = new GraphicsFrame();
 		frame.start();
 	}
