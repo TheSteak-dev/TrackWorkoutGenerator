@@ -1,10 +1,10 @@
 <workout type>
-//ladder
+/*ladder*/
 <type>
 <reps> <distance;rest;recovery;intensity>-<distance;rest;recovery;intensity>
 <rest>
 end
-//straight
+/*straight*/
 <type>
 <rep> <distance;intensity;recovery;rest>
 <times>
