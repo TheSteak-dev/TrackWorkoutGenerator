@@ -215,7 +215,7 @@ public class GraphicsFrame {
 		pane.repaint();
 	}
 	
-	private void changeSortBy(String panel)
+	private void changeSortBy(String panel) //change how the workouts are arranged
 	{
 		if (panel == "preset")
 		{
@@ -227,7 +227,7 @@ public class GraphicsFrame {
 		}
 	}
 	
-	private String display(int i, String system)
+	private String display(int i, String system) // go to a new screen
 	{
 		if (system.equals("preset"))
 		{
