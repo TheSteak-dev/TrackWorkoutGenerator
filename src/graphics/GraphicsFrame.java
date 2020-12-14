@@ -220,10 +220,12 @@ public class GraphicsFrame {
 		if (panel == "preset")
 		{
 			String sortType = sortOptions[presetCB.getSelectedIndex()];
+			sortBy(presetWorkouts, sortType);
 		}
 		if (panel == "saved")
 		{
 			String sortType = sortOptions[savedCB.getSelectedIndex()];
+			sortBy(savedWorkouts, sortType);
 		}
 	}
 	
@@ -241,6 +243,11 @@ public class GraphicsFrame {
 		}
 		LogWriter.write("failed to load");
 		return "failed to load";
+	}
+	
+	private void sortBy(Workout[] arr, String type)
+	{
+		
 	}
 
 }
