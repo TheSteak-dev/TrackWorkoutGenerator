@@ -8,7 +8,7 @@ public class Straight implements Set
 	private int type, difficulty, rest, repNum, totalDistance;
 	
 	public Straight(int type)
-{
+	{
 		// TODO generate
 	}
 	
@@ -62,7 +62,7 @@ public class Straight implements Set
 		return total - restdiff;
 	}
 	
-	private Rep decode(String rep) //def a easier way to do this, but nah not now
+	private Rep decode(String rep)
 	{
 		String[] nums = rep.split(";");
 		return new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3]));
