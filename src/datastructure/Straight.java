@@ -66,7 +66,6 @@ public class Straight implements Set
 	{
 		String[] nums = rep.split(";");
 		return new Rep(Integer.parseInt(nums[0]), Integer.parseInt(nums[1]), Integer.parseInt(nums[2]), Integer.parseInt(nums[3]));
-		
 	}
 	@Override
 	public int getDistance() 
