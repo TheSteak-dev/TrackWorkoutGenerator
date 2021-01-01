@@ -1,7 +1,7 @@
 <workout type>
 /*ladder*/
 <type>
-<reps> <distance;rest;recovery;intensity>-<distance;rest;recovery;intensity>
+<reps> <distance;rest;recovery;intensity>|-<distance;rest;recovery;intensity>|
 <rest>
 end
 /*straight*/
