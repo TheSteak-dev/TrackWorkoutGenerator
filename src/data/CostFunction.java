@@ -18,6 +18,6 @@ public class CostFunction
 			}
 			sum += Math.pow(prediction - y[i], 2);
 		}
-		return 0;
+		return sum / y.length;
 	}
 }
