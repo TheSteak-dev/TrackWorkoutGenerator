@@ -6,7 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-public class LogWriter {
+public class LogWriter 
+{
 
 	private static FileWriter writer;
 	

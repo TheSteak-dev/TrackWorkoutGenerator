@@ -6,7 +6,8 @@ import javax.swing.JPanel;
  * A Stack for keeping track of panels
  */
 
-public class PanelStack {
+public class PanelStack 
+{
 	
 	private JPanel[] stack;
 	private int last;

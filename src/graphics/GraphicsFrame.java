@@ -19,7 +19,8 @@ import datastructure.Workout;
 import logging.LogWriter;
 
 
-public class GraphicsFrame {
+public class GraphicsFrame 
+{
 	
 	private final String[] sortOptions = new String[] {"default", "difficulty", ""};
 	
@@ -145,9 +146,10 @@ public class GraphicsFrame {
 		presetSortBy = new JComboBox<String>(sortOptions);
 		presetSortBy.setEditable(false);
 		presetSortBy.setBounds(390, 100, 100, 30);
-		presetSortBy.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) {
+		presetSortBy.addActionListener(new ActionListener() {@Override	public void actionPerformed(ActionEvent arg0) 
+		{
 			changeSortBy("preset");
-			}});
+		}});
 
 		
 		presetBox = new JTextArea("Choose a Workout");

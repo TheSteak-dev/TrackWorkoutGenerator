@@ -27,28 +27,7 @@ public class Rep {
 		int changes = 0;
 		while (Math.abs(this.difficulty - difficulty) > 500)
 		{
-			changes = changes % 5;
-			if (difficulty < this.difficulty)
-			{
-				if (changes == 0) distance -= Math.random() * 200;
-				else if (changes == 1) intensity -=5;
-				else if (changes == 2) recovery += 25;
-				else if (changes == 3) rest -= 15;
-				round();
-				
-				this.difficulty = calculateDifficulty();
-			}
-			else if (difficulty > this.difficulty)
-			{
-				if (changes == 0) distance += Math.random() * 200;
-				else if (changes == 1) intensity += 5;
-				else if (changes == 2) recovery -= 50;
-				else if (changes == 3) rest += 30;
-				round();
-				
-				this.difficulty = calculateDifficulty();
-			}
-			changes ++;
+			break;
 		}
 	}
 	public int getDistance()
