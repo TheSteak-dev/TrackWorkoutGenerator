@@ -23,9 +23,8 @@ public class Workout {
 	public static final int SPEEDENDURANCE2 = 3456;
 	public static final int ENDURANCE = 4567;
 	
-	public Workout(String fileName) 
+	public Workout(String fileName)
 	{
-		LogWriter.write("Workout Loaded: " + fileName);
 		this.type = -1;
 		totalDistance = 0;
 		sets =  new Set[0];
@@ -62,7 +61,7 @@ public class Workout {
 		difficulty = calculateDifficulty();
 		scanner.close();
 
-		
+		LogWriter.write("Workout Loaded: " + fileName);
 		
 		
 		
