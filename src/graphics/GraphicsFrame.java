@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.Arrays;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -15,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.Border;
 
+import comparators.CompareByDifficulty;
 import datastructure.Workout;
 import logging.LogWriter;
 
@@ -249,7 +251,10 @@ public class GraphicsFrame
 	
 	private void sortBy(Workout[] arr, String type)
 	{
-		
+		if ("difficulty".equals(type))
+		{
+			Arrays.sort(arr, new CompareByDifficulty());
+		}
 	}
 
 }
