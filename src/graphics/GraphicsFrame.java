@@ -24,7 +24,7 @@ import logging.LogWriter;
 public class GraphicsFrame 
 {
 	
-	private final String[] sortOptions = new String[] {"default", "difficulty", ""};
+	private final String[] sortOptions = new String[] {"default", "difficulty", "type"};
 	
 	private final int MAXFRAMES = 2;
 	
