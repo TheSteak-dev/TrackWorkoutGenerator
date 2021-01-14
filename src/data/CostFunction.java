@@ -20,4 +20,9 @@ public class CostFunction
 		}
 		return sum / y.length;
 	}
+	
+	public void gradientDescent(double[] theta, double[][] x, double[] y, double alpha)
+	{
+		return;
+	}
 }
