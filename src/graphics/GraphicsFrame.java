@@ -17,6 +17,8 @@ import javax.swing.JTextArea;
 import javax.swing.border.Border;
 
 import comparators.CompareByDifficulty;
+import comparators.CompareByDistance;
+import comparators.CompareByType;
 import datastructure.Workout;
 import logging.LogWriter;
 
@@ -24,7 +26,7 @@ import logging.LogWriter;
 public class GraphicsFrame 
 {
 	
-	private final String[] sortOptions = new String[] {"default", "difficulty", "type"};
+	private final String[] sortOptions = new String[] {"difficulty", "type", "distance"};
 	
 	private final int MAXFRAMES = 2;
 	
@@ -254,6 +256,14 @@ public class GraphicsFrame
 		if ("difficulty".equals(type))
 		{
 			Arrays.sort(arr, new CompareByDifficulty());
+		}
+		else if ("type".equals(type))
+		{
+			Arrays.sort(arr, new CompareByType());
+		}
+		else if ("distance".equals(type))
+		{
+			Arrays.sort(arr, new CompareByDistance());
 		}
 	}
 
