@@ -1,6 +1,6 @@
 package data;
 
-public class CostFunction 
+public class Data 
 {
 	public static double calculateCost(double[] theta, double[][] x, double[] y)
 	{
