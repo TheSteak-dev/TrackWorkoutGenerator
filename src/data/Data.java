@@ -2,6 +2,13 @@ package data;
 
 public class Data 
 {
+	/**
+	 * 
+	 * @param theta The coefficient vector [i x 1] sized
+	 * @param x The input matrix [i x k] sized
+	 * @param y The training output vector [k x 1] sized
+	 * @return The cost of the given parameters
+	 */
 	public static double calculateCost(double[] theta, double[][] x, double[] y)
 	{
 		assert x.length == y.length;
@@ -21,8 +28,17 @@ public class Data
 		return sum / y.length;
 	}
 	
-	public void gradientDescent(double[] theta, double[][] x, double[] y, double alpha)
+	/**
+	 * 
+	 * @param theta The coefficient vector [i x 1] sized
+	 * @param x The input matrix [i x k] sized
+	 * @param y The training output vector [k x 1] sized
+	 * @param alpha The descent coefficent
+	 */
+	public static void gradientDescent(double[] theta, double[][] x, double[] y, double alpha)
 	{
 		return;
 	}
+	
+
 }
