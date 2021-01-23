@@ -9,7 +9,7 @@ public class Data
 	 * @param y The training output vector [k x 1] sized
 	 * @return The cost of the given parameters
 	 */
-	public static double calculateCost(double[] theta, double[][] x, double[] y)
+	public static double calculateLinearCost(double[] theta, double[][] x, double[] y)
 	{
 		assert x.length == y.length;
 		assert x[0].length == theta.length;
@@ -35,7 +35,17 @@ public class Data
 	 * @param y The training output vector [k x 1] sized
 	 * @param alpha The descent coefficent
 	 */
-	public static void gradientDescent(double[] theta, double[][] x, double[] y, double alpha)
+	public static void linearGradientDescent(double[] theta, double[][] x, double[] y, double alpha)
+	{
+		return;
+	}
+	
+	public static double calculateLogisticCost(double[] theta, double[][] x, double[] y)
+	{
+		return 0;
+	}
+	
+	public static void logisticalGradientDescent(double[] theta, double[][] x, double[] y, double alpha)
 	{
 		return;
 	}
