@@ -1,6 +1,6 @@
 package data;
 
-public class Data 
+public class MachineLearningFunctions 
 {
 	/**
 	 * Calculating the cost for a linear function
