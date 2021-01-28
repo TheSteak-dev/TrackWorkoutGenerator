@@ -10,7 +10,10 @@ public class CompareByType implements Comparator<Workout>
 	@Override
 	public int compare(Workout one, Workout two) 
 	{
-		return one.getType() - two.getType();
+		int i = one.getType() - two.getType();
+		if (i == 0)
+			return one.getDifficulty() - two.getDifficulty();
+		return i;
 	}
 
 }
