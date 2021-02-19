@@ -1,3 +1,5 @@
+package TrackWorkoutGenerator;
+
 import graphics.GraphicsFrame;
 import logging.LogWriter;
 
