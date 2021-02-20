@@ -38,6 +38,9 @@ public class MachineLearningFunctions
 	 */
 	public static void linearGradientDescent(double[] theta, double[][] x, double[] y, double alpha, int interations)
 	{
+		assert x.length == y.length;
+		assert x[0].length == theta.length;
+		assert alpha != 0;
 		return;
 	}
 	
@@ -50,6 +53,8 @@ public class MachineLearningFunctions
 	 */
 	public static double calculateLogisticCost(double[] theta, double[][] x, double[] y)
 	{
+		assert x.length == y.length;
+		assert x[0].length == theta.length;
 		return 0;
 	}
 	
@@ -63,6 +68,9 @@ public class MachineLearningFunctions
 	 */
 	public static void logisticalGradientDescent(double[] theta, double[][] x, double[] y, double alpha, int interations)
 	{
+		assert x.length == y.length;
+		assert x[0].length == theta.length;
+		assert alpha != 0;
 		return;
 	}
 	
