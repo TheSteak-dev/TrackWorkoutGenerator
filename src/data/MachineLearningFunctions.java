@@ -74,5 +74,10 @@ public class MachineLearningFunctions
 		return;
 	}
 	
+	private int sigmoidFuction(double hx)
+	{
+		return 0;
+	}
+	
 
 }
