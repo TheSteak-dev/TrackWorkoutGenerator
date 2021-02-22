@@ -65,6 +65,7 @@ public class MachineLearningFunctions
 	 * @param y The training output vector [k x 1] sized
 	 * @param alpha The descent coefficient
 	 * @param interations The number of times gradient descent is performed
+	 * @post theta has new values
 	 */
 	public static void logisticalGradientDescent(double[] theta, double[][] x, double[] y, double alpha, int interations)
 	{
@@ -74,9 +75,26 @@ public class MachineLearningFunctions
 		return;
 	}
 	
-	private int sigmoidFuction(double hx)
+	/**
+	 * 
+	 * @param hx The number to get sigmoided
+	 * @return A value between 0 and 1
+	 */
+	private double sigmoidFuction(double hx)
 	{
-		return 0;
+		assert hx > 0;
+		return 1 / (1 + Math.pow(Math.E, -1 * hx));
+	}
+	
+	/**
+	 * 
+	 * @param x The value to get rounded
+	 * @return 0 or 1, 
+	 */
+	private int to1or0(double x)
+	{
+		assert (x > 0 && x < 1);
+		return (int) Math.round(x);
 	}
 	
 
