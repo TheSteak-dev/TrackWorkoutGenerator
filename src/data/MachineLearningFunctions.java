@@ -80,7 +80,7 @@ public class MachineLearningFunctions
 	 * @param hx The number to get sigmoided
 	 * @return A value between 0 and 1
 	 */
-	public double sigmoidFuction(double hx)
+	public static double sigmoidFuction(double hx)
 	{
 		assert hx > 0;
 		return 1 / (1 + Math.pow(Math.E, -1 * hx));
@@ -91,7 +91,7 @@ public class MachineLearningFunctions
 	 * @param x The value to get rounded
 	 * @return 0 or 1, 
 	 */
-	public int to1or0(double x)
+	public static int to1or0(double x)
 	{
 		assert (x > 0 && x < 1);
 		return (int) Math.round(x);
