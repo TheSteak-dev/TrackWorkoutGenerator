@@ -33,6 +33,19 @@ public class LogWriter
 			e.printStackTrace();
 		}
 	}
+	
+	public static void logError(String error, Error e)
+	{
+		try
+		{
+			writer.write(String.format("[%s] %s\n", LocalDateTime.now(), error + e.getCause()));
+			writer.flush();
+		}
+		catch(IOException E)
+		{
+			E.printStackTrace();
+		}
+	}
 
 
 }
