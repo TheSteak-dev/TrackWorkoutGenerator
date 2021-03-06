@@ -1,7 +1,7 @@
 package datastructure;
-//a class that represents a set of reps
 
-public interface Set {
+public interface Set 
+{
 	
 	public int getDifficulty();
 	

@@ -39,7 +39,7 @@ public class Workout {
 			e.printStackTrace();
 		}
 		type = scanner.nextInt();
-		scanner.nextLine(); //eating a line
+		scanner.nextLine();
 		
 		ArrayList<String> reps = new ArrayList<String>();
 		while(scanner.hasNextLine())
