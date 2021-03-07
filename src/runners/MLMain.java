@@ -1,6 +1,8 @@
 package runners;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 import datastructure.Workout;
 
@@ -17,10 +19,22 @@ public class MLMain
 	
 	private static Workout[] presetWorkouts;
 	
+	
 	public static void main(String[] args)
 	{
 		
 		File preset = new File ("res/premade");
+		File difficulties = new File("res/premade/difficulties.txt");
+		
+		try 
+		{
+			FileReader test = new FileReader(difficulties);
+		} 
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+		}
+		
 		premadeNum = presetWorkouts.length - 1;
 		
 		presetWorkouts = new Workout[premadeNum];
@@ -36,7 +50,7 @@ public class MLMain
 			//TODO unpack info
 		}
 		
-		File difficulties = new File("C:\\Users\\skywa\\Documents\\Java Code\\WorkoutGenerator\\TrackWorkoutGenerator\\TrackWorkoutGenerator\\res\\premade\\difficulties.txt");
+		
 		
 	}
 }
