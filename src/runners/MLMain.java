@@ -2,7 +2,6 @@ package runners;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Scanner;
 
 import datastructure.Workout;
@@ -26,11 +25,10 @@ public class MLMain
 		
 		File preset = new File ("res/premade");
 		File difficulties = new File("res/premade/difficulties.txt");
-		Scanner test = null;
-		
+		Scanner scanner = null;
 		try 
 		{
-			test = new Scanner(difficulties);
+			scanner = new Scanner(difficulties);
 		} 
 		catch (FileNotFoundException e) 
 		{
@@ -49,7 +47,7 @@ public class MLMain
 		for (int i = 0; i < premadeNum; i++)
 		{
 			presetWorkouts[i] = new Workout(preset.listFiles()[i].toString());
-			y[i] = test.nextInt();
+			y[i] = scanner.nextInt();
 			//TODO unpack info
 		}
 		
