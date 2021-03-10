@@ -48,7 +48,7 @@ public class MLMain
 		{
 			presetWorkouts[i] = new Workout(preset.listFiles()[i].toString());
 			y[i] = scanner.nextInt();
-			//TODO unpack info
+			//TODO make x
 		}
 		
 		
