@@ -9,13 +9,13 @@ import datastructure.Workout;
 public class MLMain 
 {
 	private static double[] y;
-	private static double[][] x;
+	private static double[][] x; //[]
 	private static double[] theta;
 	private static double alpha;
 	
 	private static int premadeNum = 0;
 	
-	private static final int parameters = 4;
+	private static final int parameters = 4; //difficulty needs to be remade for sets
 	
 	private static Workout[] presetWorkouts;
 	
