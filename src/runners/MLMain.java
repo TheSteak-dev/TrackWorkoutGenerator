@@ -5,18 +5,19 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import data.MachineLearningFunctions;
+import datastructure.Set;
 import datastructure.Workout;
 
 public class MLMain 
 {
 	private static double[] y;
-	private static double[][] x; //[]
+	private static double[][] x;
 	private static double[] theta;
 	private static double alpha;
 	
 	private static int premadeNum = 0;
 	
-	private static final int parameters = 4; //difficulty needs to be remade for sets
+	private static final int maxSets = 8;
 	
 	private static Workout[] presetWorkouts;
 	
@@ -41,15 +42,22 @@ public class MLMain
 		presetWorkouts = new Workout[premadeNum];
 		
 		y = new double[premadeNum];
-		x = new double[premadeNum][parameters];
-		theta = new double[parameters];
+		x = new double[premadeNum][maxSets];
+		theta = new double[maxSets];
 		alpha = 0.1;
 		
 		for (int i = 0; i < premadeNum; i++)
 		{
-			presetWorkouts[i] = new Workout(preset.listFiles()[i].toString());
+			Workout temp = new Workout(preset.listFiles()[i].toString());
+			presetWorkouts[i] = temp;
+			
 			y[i] = scanner.nextInt();
-			//TODO make x
+			Set[] s = temp.getSets();
+			for (int j = 0; i < s.length; j++)
+			{
+
+			}
+			//TODO mak
 		}
 		
 		MachineLearningFunctions.linearGradientDescent(theta, x, y, alpha, 100);
