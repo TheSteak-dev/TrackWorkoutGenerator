@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import data.MachineLearningFunctions;
 import datastructure.Workout;
 
 public class MLMain 
@@ -51,7 +52,7 @@ public class MLMain
 			//TODO make x
 		}
 		
-		
+		MachineLearningFunctions.linearGradientDescent(theta, x, y, alpha, 100);
 		
 	}
 }
