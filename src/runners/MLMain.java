@@ -15,7 +15,7 @@ public class MLMain
 	private static double[] theta;
 	private static double alpha;
 	
-	private static int premadeNum = 0;
+	private static int premadeNum = 50;
 	
 	private static final int maxSets = 8;
 	
