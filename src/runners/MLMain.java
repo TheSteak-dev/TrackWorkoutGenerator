@@ -18,6 +18,7 @@ public class MLMain
 	private static int premadeNum = 50;
 	
 	private static final int maxSets = 8;
+	private static final int parameters = 4;
 	
 	private static Workout[] presetWorkouts;
 	
@@ -42,7 +43,7 @@ public class MLMain
 		presetWorkouts = new Workout[premadeNum];
 		
 		y = new double[premadeNum];
-		x = new double[premadeNum][maxSets];
+		x = new double[premadeNum * maxSets][parameters];
 		theta = new double[maxSets];
 		alpha = 0.1;
 		
