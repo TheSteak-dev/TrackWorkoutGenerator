@@ -28,13 +28,14 @@ public class MLMain
 		
 		File preset = new File ("res/premade");
 		File difficulties = new File("res/premade/difficulties.txt");
-		Scanner scanner = null;
+		Scanner scanner;
 		try 
 		{
 			scanner = new Scanner(difficulties);
 		} 
 		catch (FileNotFoundException e) 
 		{
+			scanner = null;
 			e.printStackTrace();
 		}
 		
