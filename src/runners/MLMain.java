@@ -57,7 +57,10 @@ public class MLMain
 			Set[] s = temp.getSets();
 			for (int j = 0; i < s.length; j++)
 			{
-
+				x[premadeNum * i + j][0] = s[j].getDistance();
+				x[premadeNum * i + j][1] = s[j].getRest();
+				x[premadeNum * i + j][2] = s[j].getType();
+				x[premadeNum * i + j][3] = s[j].getReps().length;
 			}
 			//TODO mak
 		}
