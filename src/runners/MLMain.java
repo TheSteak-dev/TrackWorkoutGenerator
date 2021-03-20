@@ -62,7 +62,6 @@ public class MLMain
 				x[premadeNum * i + j][2] = s[j].getType();
 				x[premadeNum * i + j][3] = s[j].getReps().length;
 			}
-			//TODO mak
 		}
 		
 		MachineLearningFunctions.linearGradientDescent(theta, x, y, alpha, 100);
