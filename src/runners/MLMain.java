@@ -39,7 +39,7 @@ public class MLMain
 			e.printStackTrace();
 		}
 		
-		premadeNum = presetWorkouts.length - 1;
+		premadeNum = --presetWorkouts.length;
 		
 		presetWorkouts = new Workout[premadeNum];
 		
