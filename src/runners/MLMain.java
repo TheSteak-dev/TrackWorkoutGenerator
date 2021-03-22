@@ -46,7 +46,7 @@ public class MLMain
 		y = new double[premadeNum];
 		x = new double[premadeNum * maxSets][parameters];
 		theta = new double[maxSets];
-		alpha = 0.1;
+		alpha = 0.01;
 		
 		for (int i = 0; i < premadeNum; i++)
 		{
