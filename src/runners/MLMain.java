@@ -80,7 +80,7 @@ public class MLMain
 				x[premadeNum * i + j][19] = set.getReps().length * set.getReps().length;
 			}
 		}
-		
+		System.out.println(MachineLearningFunctions.calculateLinearCost(theta, x, y));
 		MachineLearningFunctions.linearGradientDescent(theta, x, y, alpha, 100);
 		
 	}
