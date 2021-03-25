@@ -39,6 +39,12 @@ public class MLMain
 			e.printStackTrace();
 		}
 		
+		presetWorkouts = new Workout[preset.listFiles().length];
+		for (int i = 0; i < preset.listFiles().length; i++)
+		{
+			presetWorkouts[i] = new Workout(preset.listFiles()[i].toString());
+		}
+		
 		premadeNum = presetWorkouts.length - 1;
 		
 		presetWorkouts = new Workout[premadeNum];
