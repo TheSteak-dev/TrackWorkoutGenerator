@@ -50,7 +50,7 @@ public class MLMain
 		presetWorkouts = new Workout[premadeNum];
 		
 		y = new double[premadeNum];
-		x = new double[premadeNum * maxSets][parameters + parameters ^ 2];
+		x = new double[premadeNum * maxSets][(parameters + 1) * parameters];
 		theta = new double[maxSets];
 		alpha = 0.01;
 		
@@ -61,7 +61,7 @@ public class MLMain
 			
 			y[i] = scanner.nextInt();
 			Set[] s = temp.getSets();
-			for (int j = 0; i < s.length; j++)
+			for (int j = 0; i < s.length - 1; j++)
 			{
 				Set set = s[j];
 				x[premadeNum * i + j][0] = set.getDistance();
