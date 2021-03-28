@@ -61,7 +61,7 @@ public class MLMain
 			
 			y[i] = scanner.nextInt();
 			Set[] s = temp.getSets();
-			for (int j = 0; i < s.length - 1; j++)
+			for (int j = 0; j < s.length; j++)
 			{
 				Set set = s[j];
 				x[premadeNum * i + j][0] = set.getDistance();
