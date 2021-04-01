@@ -49,7 +49,7 @@ public class MLMain
 		
 		presetWorkouts = new Workout[premadeNum];
 		
-		y = new double[premadeNum];
+		y = new double[(parameters + 1) * parameters];
 		x = new double[premadeNum * maxSets][(parameters + 1) * parameters];
 		theta = new double[maxSets];
 		alpha = 0.01;
