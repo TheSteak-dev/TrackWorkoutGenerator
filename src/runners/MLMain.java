@@ -54,7 +54,7 @@ public class MLMain
 		theta = new double[maxSets];
 		alpha = 0.01;
 		
-		for (int i = 0; i < premadeNum; i++)
+		for (int i = 0; i < (parameters + 1) * parameters; i++)
 		{
 			Workout temp = new Workout(preset.listFiles()[i].toString());
 			presetWorkouts[i] = temp;
