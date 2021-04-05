@@ -86,7 +86,7 @@ public class MLMain
 				x[maxSets * i + j][19] = set.getReps().length * set.getReps().length;
 			}
 		}
-		System.out.println("\n\nCost: " + (double)MachineLearningFunctions.calculateLinearCost(theta, x, y));
+		System.out.println("\n\nCost: " + (int)MachineLearningFunctions.calculateLinearCost(theta, x, y));
 		MachineLearningFunctions.linearGradientDescent(theta, x, y, alpha, 100);
 		
 	}
