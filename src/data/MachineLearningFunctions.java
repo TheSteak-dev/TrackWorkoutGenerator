@@ -41,6 +41,13 @@ public class MachineLearningFunctions
 		assert x.length == y.length;
 		assert x[0].length == theta.length;
 		assert alpha != 0;
+		
+		for (int i = 0; i < interations; i++)
+		{
+			double[] temp = new double[theta.length];
+			theta = temp;
+		}
+		
 		return;
 	}
 	
