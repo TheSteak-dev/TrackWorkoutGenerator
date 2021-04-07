@@ -101,8 +101,7 @@ public class MachineLearningFunctions
 	public static int to1or0(double x)
 	{
 		assert (x > 0 && x < 1);
-		if (x < 0.5) return 0;
-		return 1;
+		return (int)(x + 0.5);
 	}
 	
 
