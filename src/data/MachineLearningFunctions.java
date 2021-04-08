@@ -45,6 +45,10 @@ public class MachineLearningFunctions
 		for (int i = 0; i < interations; i++)
 		{
 			double[] temp = new double[theta.length];
+			for (int j = 0; j < theta.length; j++)
+			{
+				//TODO update theta[j]
+			}
 			theta = temp;
 		}
 		
