@@ -51,8 +51,6 @@ public class MachineLearningFunctions
 			}
 			theta = temp;
 		}
-		
-		return;
 	}
 	
 	/**
