@@ -13,6 +13,7 @@ public class MachineLearningFunctions
 	{
 		assert x.length == y.length;
 		assert x[0].length == theta.length;
+		assert (theta != null && x != null && y != null);
 		
 		long sum = 0;
 		
@@ -41,6 +42,7 @@ public class MachineLearningFunctions
 		assert x.length == y.length;
 		assert x[0].length == theta.length;
 		assert alpha != 0;
+		assert (theta != null && x != null && y != null);
 		
 		for (int i = 0; i < interations; i++)
 		{
@@ -64,6 +66,8 @@ public class MachineLearningFunctions
 	{
 		assert x.length == y.length;
 		assert x[0].length == theta.length;
+		assert (theta != null && x != null && y != null);		
+
 		return 0;
 	}
 	
@@ -81,6 +85,8 @@ public class MachineLearningFunctions
 		assert x.length == y.length;
 		assert x[0].length == theta.length;
 		assert alpha != 0;
+		assert (theta != null && x != null && y != null);		
+
 		return;
 	}
 	
