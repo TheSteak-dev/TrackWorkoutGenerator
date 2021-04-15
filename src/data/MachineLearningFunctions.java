@@ -85,6 +85,7 @@ public class MachineLearningFunctions
 		assert x.length == y.length;
 		assert x[0].length == theta.length;
 		assert alpha != 0;
+		assert interations != 0;
 		assert (theta != null && x != null && y != null);		
 
 		return;
